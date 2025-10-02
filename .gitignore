@@ -6,6 +6,9 @@
 # Checkpoints de Jupyter
 **/.ipynb_checkpoints
 
+#Trash de notebooks
+.Trash-1000
+
 # Entornos virtuales de Python
 venv/
 .venv/
