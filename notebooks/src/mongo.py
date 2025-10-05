@@ -140,7 +140,7 @@ def contar_documentos(nombre_base, nombre_coleccion):
     
     return coleccion.count_documents({})
 
-def cargar_csv_a_coleccion(ruta, nombre_base, nombre_coleccion,ordenado=False):
+def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
     """
     Lee CSV usando lectura_csv y lo inserta en la colección.
     Devuelve el InsertManyResult o None si no se insertó nada.
@@ -149,9 +149,7 @@ def cargar_csv_a_coleccion(ruta, nombre_base, nombre_coleccion,ordenado=False):
         ruta: dirección del archivo csv.
         nombre_coleccion: nombre de la colección a guardar
         ordenado (opcional):
-    """
-    df = lectura_csv(ruta)
-    
+    """ 
     if df is None or df.empty:
         return None
 
