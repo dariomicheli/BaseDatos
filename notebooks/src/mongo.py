@@ -149,9 +149,27 @@ def cargar_csv_a_coleccion(ruta, nombre_base, nombre_coleccion,ordenado=False):
         ruta: dirección del archivo csv.
         nombre_coleccion: nombre de la colección a guardar
         ordenado (opcional):
-    """
-    df = lectura_csv(ruta)
+    """ 
+    df=lectura_csv(ruta)
     
+    if df is None or df.empty:
+        return None
+
+    # Convertir a diccionario
+    datos = df.to_dict(orient="records")
+
+    return insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado)
+
+def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
+    """
+    Lee CSV usando lectura_csv y lo inserta en la colección.
+    Devuelve el InsertManyResult o None si no se insertó nada.
+
+    Parametros:
+        ruta: dirección del archivo csv.
+        nombre_coleccion: nombre de la colección a guardar
+        ordenado (opcional):
+    """ 
     if df is None or df.empty:
         return None
 
