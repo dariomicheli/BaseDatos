@@ -32,3 +32,27 @@ def crear_relacion(tx, nodo_origen, campo_origen, valor_origen,
     RETURN a, b, r
     """
     return tx.run(query, valor_origen=valor_origen, valor_destino=valor_destino).single()
+
+
+def nodo_existe(label, driver):
+    """
+    Verifica si existen nodos de un tipo específico en Neo4j.
+
+    Args:
+        label (str): La etiqueta del nodo a verificar (ej. 'Usuario', 'Destino').
+        driver: Instancia del driver de Neo4j.
+
+    Returns:
+        bool: True si existen nodos de ese tipo, False si no existen.
+    """
+    query = f"MATCH (n:{label}) RETURN count(n) > 0 AS existe"
+    with driver.session() as session:
+        resultado = session.run(query)
+        return resultado.single()["existe"]
+    
+def obtener_usuarios(tx):
+    """
+    Devuelve la lista de valores únicos de los usuarios, por ejemplo sus IDs
+    """
+    result = tx.run("MATCH (u:Usuario) RETURN u.id AS id")
+    return [record["id"] for record in result]
