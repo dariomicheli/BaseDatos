@@ -1,0 +1,23 @@
+Carga de Datos
+-- Preguntar si la carga a traves de CSV la ven correcta
+
+Reservas
+-- Dentro de MongoDB debemos guardar las reservas de estado "pendiente"? Si bien 
+estas tambien se guardan en Redis, tienen un tiempo de expiración. 
+
+Cache de Busqueda
+-- Que se prentende que se guarde?
+-- En que punto de las consultas integradas deberíamos usarlo?
+
+Relaciones FAMILIAR DE
+-- En que punto de las consultadas integradas se debería usar? Veo que solo
+se hace referencia a la de AMIGO DE. 
+
+Consultas integradas
+-- Dentro de la resolución de consultas esperan que este todo el codigo ahi, o se puede 
+modularizar en funciones??
+
+Rutas
+-- Hay manera de modificar las rutas?. Comentar que se incluyo las carpetas SRC y Fuentes dentro de la 
+que se llama NOTEBOOK porque sino no se podia acceder desde jupyterLab
+
