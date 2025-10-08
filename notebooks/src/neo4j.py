@@ -1,3 +1,22 @@
+
+def nodo_existe(label, driver):
+    """
+    Verifica si existen nodos de un tipo específico en Neo4j.
+
+    Args:
+        label (str): La etiqueta del nodo a verificar (ej. 'Usuario', 'Destino').
+        driver: Instancia del driver de Neo4j.
+
+    Returns:
+        bool: True si existen nodos de ese tipo, False si no existen.
+    """
+    query = f"MATCH (n:{label}) RETURN count(n) > 0 AS existe"
+    with driver.session() as session:
+        resultado = session.run(query)
+        return resultado.single()["existe"]
+
+
+
 def crear_nodo(tx, nombre_nodo, clave_id, datos):
     """
     Crea un nodo en Neo4j de forma genérica si no existe.
@@ -48,23 +67,6 @@ def crear_relacion_bidireccional(tx, nodo_origen, campo_origen, valor_origen,
         valor_origen=valor_origen,
         valor_destino=valor_destino
     ).single()
-
-
-def nodo_existe(label, driver):
-    """
-    Verifica si existen nodos de un tipo específico en Neo4j.
-
-    Args:
-        label (str): La etiqueta del nodo a verificar (ej. 'Usuario', 'Destino').
-        driver: Instancia del driver de Neo4j.
-
-    Returns:
-        bool: True si existen nodos de ese tipo, False si no existen.
-    """
-    query = f"MATCH (n:{label}) RETURN count(n) > 0 AS existe"
-    with driver.session() as session:
-        resultado = session.run(query)
-        return resultado.single()["existe"]
     
 def obtener_usuarios(tx):
     """
