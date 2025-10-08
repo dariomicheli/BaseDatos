@@ -25,7 +25,7 @@ ciudades_arg = {
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]
 tipos_actividad = ["aventura", "cultural", "gastronómica", "relax", "deportiva"]
 servicios_posibles = ["wifi", "spa", "pileta", "desayuno", "gimnasio", "restaurant"]
-estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada"]
+estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada",""]
 
 # Cantidades
 n_usuarios = 500
