@@ -1,51 +1,51 @@
 destino_id,ciudad,pais,tipo,precio_promedio
-1,Valencia,Brasil,Playa,175291
-2,Guadalajara,Brasil,Montaña,61924
-3,Tarragona,Chile,Relax,151166
-4,Murcia,Brasil,Cultural,70759
-5,Guadalajara,Italia,Playa,65439
-6,Zaragoza,España,Relax,55155
-7,Zaragoza,Chile,Montaña,190730
-8,Cantabria,Chile,Playa,63867
-9,Salamanca,Italia,Playa,120692
-10,Salamanca,Italia,Relax,99093
-11,Burgos,Argentina,Aventura,54142
-12,Guipúzcoa,México,Montaña,182911
-13,Cantabria,España,Cultural,101147
-14,Toledo,Italia,Cultural,138041
-15,Valladolid,México,Montaña,59359
-16,Palencia,Chile,Aventura,197220
-17,Girona,Italia,Aventura,88096
-18,Cáceres,Chile,Montaña,154776
-19,Guipúzcoa,Argentina,Cultural,150500
-20,Santa Cruz de Tenerife,México,Cultural,107895
-21,Pontevedra,México,Montaña,158884
-22,Salamanca,Chile,Cultural,198450
-23,Ceuta,Italia,Aventura,124826
-24,Zamora,Chile,Montaña,168758
-25,Badajoz,Francia,Montaña,119054
-26,Zamora,Brasil,Montaña,198723
-27,Zaragoza,España,Playa,147403
-28,Almería,Chile,Aventura,102691
-29,Lleida,Argentina,Relax,187197
-30,Tarragona,Chile,Playa,80585
-31,Lugo,Brasil,Montaña,102511
-32,Pontevedra,Argentina,Aventura,144411
-33,La Rioja,Italia,Aventura,158225
-34,Melilla,Chile,Relax,100245
-35,Soria,Argentina,Cultural,93299
-36,Guadalajara,Chile,Cultural,56281
-37,Teruel,Francia,Montaña,67558
-38,Baleares,México,Aventura,123881
-39,Castellón,Francia,Aventura,193937
-40,Burgos,Italia,Relax,111382
-41,Asturias,Brasil,Montaña,166124
-42,Granada,Brasil,Montaña,150073
-43,Cáceres,Brasil,Playa,80136
-44,Albacete,Chile,Montaña,118526
-45,Valladolid,Francia,Relax,175702
-46,Valladolid,Brasil,Aventura,55745
-47,Ávila,Francia,Cultural,104013
-48,Zaragoza,Italia,Relax,96368
-49,Ourense,Francia,Montaña,174040
-50,Santa Cruz de Tenerife,Argentina,Cultural,156517
+1,Córdoba,Argentina,Montaña,114196
+2,Mendoza,Argentina,Cultural,192964
+3,Río Cuarto,Argentina,Aventura,58331
+4,La Plata,Argentina,Playa,110990
+5,Bahía Blanca,Argentina,Playa,192853
+6,Neuquén,Argentina,Aventura,122926
+7,La Plata,Argentina,Aventura,139194
+8,San Miguel de Tucumán,Argentina,Playa,138236
+9,Córdoba,Argentina,Aventura,75353
+10,Cafayate,Argentina,Relax,119342
+11,Bahía Blanca,Argentina,Aventura,190568
+12,Villa Carlos Paz,Argentina,Cultural,194714
+13,Tafí del Valle,Argentina,Relax,100407
+14,Córdoba,Argentina,Playa,125861
+15,Córdoba,Argentina,Cultural,149647
+16,Tafí del Valle,Argentina,Montaña,92638
+17,Cafayate,Argentina,Playa,119986
+18,Río Cuarto,Argentina,Playa,190021
+19,Mendoza,Argentina,Aventura,149471
+20,San Miguel de Tucumán,Argentina,Montaña,64663
+21,Mendoza,Argentina,Montaña,155162
+22,San Miguel de Tucumán,Argentina,Playa,198682
+23,Salta,Argentina,Aventura,153712
+24,Puerto Madryn,Argentina,Montaña,86603
+25,San Rafael,Argentina,Relax,162311
+26,San Martín de los Andes,Argentina,Playa,86262
+27,Puerto Madryn,Argentina,Cultural,78743
+28,Rafaela,Argentina,Playa,160666
+29,Villa Carlos Paz,Argentina,Aventura,172696
+30,San Miguel de Tucumán,Argentina,Cultural,190763
+31,Tafí del Valle,Argentina,Cultural,126939
+32,Neuquén,Argentina,Aventura,50850
+33,San Miguel de Tucumán,Argentina,Relax,77894
+34,San Miguel de Tucumán,Argentina,Playa,148019
+35,Rafaela,Argentina,Relax,50149
+36,Cafayate,Argentina,Cultural,79325
+37,Cafayate,Argentina,Playa,65184
+38,Mendoza,Argentina,Cultural,177399
+39,Río Cuarto,Argentina,Playa,83657
+40,Puerto Madryn,Argentina,Montaña,188326
+41,Neuquén,Argentina,Relax,102730
+42,Tafí del Valle,Argentina,Montaña,164845
+43,Puerto Madryn,Argentina,Playa,108903
+44,Villa Carlos Paz,Argentina,Cultural,195207
+45,Mendoza,Argentina,Cultural,68610
+46,La Plata,Argentina,Cultural,58234
+47,Salta,Argentina,Relax,112391
+48,Tafí del Valle,Argentina,Playa,191356
+49,Rafaela,Argentina,Relax,173907
+50,San Rafael,Argentina,Aventura,99914

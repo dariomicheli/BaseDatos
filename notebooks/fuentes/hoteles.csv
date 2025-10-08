@@ -1,101 +1,101 @@
 hotel_id,nombre,ciudad,precio,calificacion,servicios
-1,Fábrica JJH S.Coop.,Guadalajara,218005,4,pileta;wifi;spa
-2,Transportes Casanovas S.Com.,Cantabria,110271,1,desayuno;pileta;spa;gimnasio
-3,Distribuciones Españolas S.A.,Valladolid,124050,5,restaurant;wifi
-4,Minería Avanzadas S.L.N.E,Girona,46714,2,pileta;gimnasio;spa
-5,Baró y asociados S.A.,Zamora,119343,3,gimnasio;desayuno;restaurant;spa
-6,Lupe Torrent Olmedo S.L.U.,Cáceres,41333,4,restaurant;wifi;pileta
-7,Construcción PFT S.A.,Guadalajara,44396,2,restaurant;wifi;pileta
-8,Timoteo Marco Almagro S.A.,Teruel,74433,1,restaurant;desayuno
-9,Hnos Campoy S.C.P,Baleares,117406,2,gimnasio;wifi
-10,Inversiones Castellana S.A.,Burgos,127358,1,spa;pileta;wifi
-11,Édgar Valenciano Vara S.A.,Castellón,142807,2,spa;pileta;gimnasio;wifi
-12,Hervás y Carbó S.Coop.,Guipúzcoa,240458,1,gimnasio;restaurant;pileta
-13,Vives y Pomares S.Com.,Valladolid,125947,1,wifi;desayuno;spa;restaurant
-14,Talleres Díez S.L.,Ourense,230266,1,pileta;wifi;desayuno;gimnasio
-15,Hotel Aguado & Asociados S.L.L.,Melilla,64652,5,restaurant;gimnasio;spa;desayuno
-16,Minería Villalonga S.Com.,Lleida,233432,1,spa;desayuno;pileta
-17,Felipe Hurtado Bayo S.L.,Ávila,169675,5,restaurant;desayuno
-18,Vila y Arjona S.L.N.E,Cantabria,94406,4,pileta;spa;restaurant
-19,Aparicio y asociados S.Com.,Guipúzcoa,196903,5,pileta;spa;desayuno;restaurant
-20,Mate y asociados S.Com.,Ourense,215996,1,wifi;gimnasio;spa
-21,Logística Castellana S.L.,Guadalajara,233405,1,restaurant;desayuno
-22,Jose Ramón Valbuena Bustos S.Com.,Granada,221736,1,restaurant;spa
-23,Darío Castells Crespo S.Coop.,Tarragona,93872,2,desayuno;wifi;spa
-24,Consultoría Gutierrez & Asociados S.A.T.,Cáceres,126886,3,pileta;spa
-25,Inmobiliaria del Levante S.A.,Salamanca,164788,2,restaurant;gimnasio;desayuno
-26,Doménech y Costa S.A.,Tarragona,180400,5,wifi;restaurant
-27,Minería YTY S.L.L.,Zaragoza,202123,1,pileta;gimnasio
-28,Finanzas Chaves y asociados S.A.T.,Valencia,188468,5,desayuno;spa;pileta;wifi
-29,Noriega y Aznar S.L.,Cantabria,203752,5,pileta;restaurant;desayuno;gimnasio
-30,Minería Soto S.Coop.,Santa Cruz de Tenerife,96300,2,wifi;gimnasio;pileta;restaurant
-31,Servicios del Noroeste S.A.,Burgos,235743,2,spa;desayuno
-32,Minería Taboada & Asociados S.A.T.,Lleida,54466,5,pileta;desayuno;wifi;restaurant
-33,Distribuciones Quesada S.C.P,Salamanca,115211,5,wifi;pileta;spa;restaurant
-34,Soluciones del Norte S.L.N.E,Salamanca,249377,1,restaurant;wifi
-35,Santos Egea Llorens S.Coop.,Guadalajara,121092,4,wifi;spa
-36,Suministros Enríquez y asociados S.A.,Santa Cruz de Tenerife,43743,4,wifi;pileta
-37,Desarrollo Mulet S.Coop.,Salamanca,198394,4,gimnasio;wifi
-38,Banca Privada IDZD S.Com.,La Rioja,243326,4,pileta;spa
-39,Distribuciones Arregui S.Coop.,Tarragona,235654,2,restaurant;spa;wifi
-40,Manufacturas Internacionales S.Com.,Salamanca,117435,5,pileta;restaurant;wifi
-41,Fábrica Galan y asociados S.L.L.,Burgos,226929,4,restaurant;gimnasio;spa
-42,Familia Mercader S.Com.,Soria,113134,4,restaurant;spa
-43,Farmaceútica Arco S.L.L.,Teruel,57090,4,wifi;gimnasio;pileta
-44,Instalaciones Lobo S.L.,Salamanca,99854,3,spa;gimnasio
-45,Industrias MZRP S.L.U.,Melilla,109963,5,spa;gimnasio;desayuno
-46,Ester Aznar Romero S.L.,Zamora,46548,3,wifi;gimnasio;restaurant;desayuno
-47,Fábrica VTTA S.A.D,Burgos,85511,3,restaurant;desayuno;wifi
-48,Sotelo y Medina S.Com.,Granada,88047,3,pileta;gimnasio;wifi
-49,Fábrica Sanchez & Asociados S.L.,Tarragona,247046,2,restaurant;wifi;pileta;desayuno
-50,Sedano y asociados S.L.N.E,Asturias,203475,2,wifi;restaurant
-51,Finanzas Yáñez S.Coop.,Zaragoza,149392,2,wifi;spa;pileta;gimnasio
-52,Timoteo Suarez Pedrosa S.L.N.E,Girona,79566,2,restaurant;wifi;pileta
-53,Guillen y Pozuelo S.L.,Lleida,147031,5,restaurant;gimnasio;desayuno
-54,Minería Solano y asociados S.A.,Cáceres,145553,2,pileta;desayuno;restaurant;wifi
-55,Cerdá & Asociados S.A.,Zaragoza,67211,3,desayuno;pileta
-56,Infraestructuras del Noroeste S.Com.,Murcia,46108,2,gimnasio;spa
-57,Ureña & Asociados S.L.,Ávila,245840,3,desayuno;wifi
-58,Gil y Guillén S.A.,Teruel,51279,1,spa;desayuno
-59,Logística Internacionales S.Coop.,Albacete,197156,2,wifi;gimnasio;desayuno;spa
-60,Soluciones Internacionales S.L.,Murcia,237425,2,spa;wifi;restaurant;desayuno
-61,Eutropio Acero Borrego S.L.,Pontevedra,205120,1,wifi;pileta;spa
-62,Manufacturas Múgica S.L.N.E,Pontevedra,46349,2,gimnasio;spa
-63,Ricardo Hervás Plana S.L.N.E,Valencia,172474,5,spa;restaurant
-64,Distribuciones JBN S.Coop.,Zaragoza,90587,2,wifi;spa;gimnasio;restaurant
-65,Goicoechea y Carranza S.L.L.,Castellón,140068,5,spa;gimnasio;pileta;wifi
-66,Supermercados Gimeno y asociados S.L.,Cantabria,189367,2,pileta;wifi;desayuno;gimnasio
-67,Familia Bauzà S.Coop.,Zaragoza,236886,1,desayuno;gimnasio;pileta;wifi
-68,Alemany y Villaverde S.Coop.,La Rioja,41814,2,gimnasio;spa
-69,Pomares y Niño S.Com.,La Rioja,92290,5,restaurant;gimnasio
-70,Hotel DQ S.A.,Valladolid,71963,4,desayuno;wifi
-71,Hermanos Revilla S.A.,Cantabria,195375,1,pileta;restaurant
-72,Carbonell y Rivera S.L.U.,Santa Cruz de Tenerife,122816,5,wifi;restaurant;pileta;gimnasio
-73,Industrias Benito y asociados S.Coop.,Badajoz,87654,4,desayuno;gimnasio;spa
-74,Logística Bárcena S.L.L.,Cáceres,216789,1,spa;gimnasio;wifi
-75,Eloy Bermúdez Recio S.Com.,Guipúzcoa,61483,4,gimnasio;desayuno
-76,Comercializadora Serrano & Asociados S.A.T.,Granada,152836,3,restaurant;spa;wifi
-77,Garmendia y asociados S.Coop.,Lleida,147927,1,desayuno;pileta;restaurant
-78,Banca Privada Hervia S.Com.,Zaragoza,145624,5,restaurant;pileta
-79,Hermanos Aller S.Com.,Girona,40134,5,gimnasio;spa
-80,Infraestructuras Correa y asociados S.A.,Asturias,122323,3,restaurant;gimnasio;wifi;pileta
-81,Amaro Palomo Carrera S.L.N.E,Valencia,178497,2,gimnasio;desayuno;restaurant;spa
-82,Luque y asociados S.Coop.,Castellón,110921,2,restaurant;pileta;desayuno
-83,Efraín Murillo Escalona S.Coop.,Cantabria,101325,2,spa;pileta;restaurant
-84,Manufacturas Integrales S.A.,Granada,118704,4,desayuno;gimnasio
-85,Saturnina Noriega Pintor S.L.,Girona,101935,2,pileta;desayuno;restaurant;spa
-86,Servicios del Sur S.A.T.,Ávila,207423,1,pileta;wifi;desayuno
-87,Banca Privada Romero y asociados S.L.N.E,Toledo,63804,1,spa;wifi;pileta;gimnasio
-88,Alimentación Globales S.A.,Guipúzcoa,56145,1,spa;gimnasio;desayuno
-89,Comercializadora UO S.A.,Toledo,164179,5,pileta;wifi;desayuno;spa
-90,Hotel del Sur S.Com.,Baleares,97926,5,desayuno;pileta;gimnasio
-91,Farmaceútica YGTF S.C.P,Baleares,172459,3,restaurant;pileta;wifi;spa
-92,Compañía Aguilar & Asociados S.Com.,Castellón,72077,5,wifi;gimnasio
-93,Inversiones Báez S.A.T.,Guadalajara,62098,2,restaurant;gimnasio
-94,Ignacia Marí Lobato S.L.L.,Guadalajara,102800,3,pileta;restaurant;desayuno;wifi
-95,Paz Juliá Echeverría S.Coop.,Ávila,177933,1,spa;desayuno;gimnasio;wifi
-96,Gallo y Montalbán S.A.,Zamora,53940,1,restaurant;pileta
-97,Banca Privada Clavero S.L.N.E,Zamora,104971,5,restaurant;pileta;desayuno;spa
-98,Servicios JHY S.Coop.,Asturias,112030,2,pileta;wifi;gimnasio;desayuno
-99,Distribuciones Cisneros S.L.,Salamanca,90081,2,gimnasio;restaurant;pileta;desayuno
-100,Anguita & Asociados S.Com.,Guadalajara,58820,1,pileta;spa;restaurant
+1,Banca Privada Madrid y asociados S.A. Hotel,La Plata,65409,4,desayuno;restaurant;gimnasio
+2,Inmobiliaria GOS S.A. Hotel,Salta,54200,1,desayuno;pileta
+3,Farmaceútica MITJ S.L. Hotel,La Plata,105183,2,gimnasio;desayuno
+4,Transportes Iberia S.L. Hotel,Córdoba,150593,2,desayuno;spa;wifi
+5,Hermanos Blasco S.L.N.E Hotel,Villa Carlos Paz,184264,1,restaurant;gimnasio
+6,Transportes Rey S.L. Hotel,Córdoba,64448,2,desayuno;restaurant
+7,Supermercados Iberia S.A.T. Hotel,Tafí del Valle,96032,4,spa;desayuno
+8,Ballester y asociados S.L. Hotel,Córdoba,142346,3,pileta;desayuno;gimnasio
+9,Comercial YY S.Coop. Hotel,Cafayate,89780,3,wifi;gimnasio
+10,Restauración del Mediterráneo S.Coop. Hotel,Tafí del Valle,182133,1,pileta;wifi;gimnasio;restaurant
+11,Suministros Albero S.C.P Hotel,Tafí del Valle,171819,5,wifi;gimnasio
+12,Roberto Moles Armengol S.A. Hotel,Neuquén,88712,1,wifi;spa;desayuno;restaurant
+13,Rosales y asociados S.Com. Hotel,Cafayate,104543,5,wifi;gimnasio;restaurant;spa
+14,Construcción Jara y asociados S.Coop. Hotel,Puerto Madryn,193006,5,pileta;restaurant;spa;gimnasio
+15,Finanzas Internacionales S.L. Hotel,La Plata,122361,2,desayuno;spa;pileta
+16,Logística Alarcón S.L. Hotel,San Miguel de Tucumán,122883,1,desayuno;gimnasio
+17,Alimentación FFX S.A.T. Hotel,Cafayate,66209,1,spa;gimnasio;pileta;wifi
+18,Infraestructuras Ferrando & Asociados S.A. Hotel,Salta,58033,2,pileta;spa;desayuno
+19,Comercial IRXH S.L. Hotel,Rafaela,224428,3,restaurant;gimnasio;wifi;pileta
+20,Compañía GIUD S.L.N.E Hotel,Cafayate,118480,1,pileta;wifi
+21,Farmaceútica PID S.Coop. Hotel,La Plata,234620,5,pileta;restaurant
+22,Suministros Morales y asociados S.A. Hotel,Río Cuarto,95215,3,restaurant;pileta
+23,Inmobiliaria TR S.A. Hotel,San Miguel de Tucumán,168065,3,wifi;desayuno
+24,Farmaceútica Saez & Asociados S.Coop. Hotel,Río Cuarto,51557,1,spa;pileta;restaurant
+25,Servicios Iberia S.L. Hotel,Tafí del Valle,155824,5,desayuno;gimnasio;wifi;restaurant
+26,Despacho NLHV S.L. Hotel,Bahía Blanca,221146,2,wifi;pileta;spa;desayuno
+27,Banco DL S.L. Hotel,Córdoba,50965,3,wifi;pileta;spa
+28,Hnos Comas S.L. Hotel,Villa Carlos Paz,105412,1,gimnasio;desayuno;spa
+29,Familia Portero S.C.P Hotel,Tafí del Valle,82598,2,wifi;spa;pileta
+30,Posada & Asociados S.Coop. Hotel,Puerto Madryn,215612,2,spa;wifi;desayuno
+31,Ale Rubio Quintero S.L.L. Hotel,Río Cuarto,163388,2,desayuno;pileta
+32,Hotel TJ S.L. Hotel,San Miguel de Tucumán,248495,2,wifi;spa
+33,Minería JUG S.L.N.E Hotel,San Martín de los Andes,126051,3,pileta;restaurant
+34,Promociones SRRN S.C.P Hotel,Tafí del Valle,173537,4,gimnasio;pileta;wifi;desayuno
+35,Farmaceútica Castellana S.L.N.E Hotel,Cafayate,86810,5,wifi;restaurant;desayuno
+36,Inversiones del Mediterráneo S.L.N.E Hotel,Salta,230983,3,gimnasio;restaurant;wifi
+37,Torrecilla & Asociados S.L.N.E Hotel,San Rafael,191149,2,wifi;desayuno;restaurant
+38,Macaria Falcó Chaves S.A. Hotel,San Miguel de Tucumán,181151,2,desayuno;wifi;pileta
+39,Grupo Torrijos S.Com. Hotel,Puerto Madryn,122291,1,pileta;gimnasio;restaurant;desayuno
+40,Transportes Sancho & Asociados S.A. Hotel,Puerto Madryn,125506,4,pileta;gimnasio;spa;wifi
+41,Hermanos Arnau S.Com. Hotel,Puerto Madryn,214307,4,restaurant;spa;pileta;gimnasio
+42,Talleres Globales S.L. Hotel,Cafayate,40106,3,spa;desayuno;pileta
+43,Comercializadora Castellana S.L. Hotel,San Miguel de Tucumán,155811,4,spa;gimnasio;desayuno;pileta
+44,Francisca Aliaga Soto S.L.N.E Hotel,Bahía Blanca,212713,1,gimnasio;restaurant;pileta
+45,Grupo Castrillo S.A. Hotel,Neuquén,236906,2,pileta;spa;gimnasio;wifi
+46,Hermanos Cabanillas S.Coop. Hotel,Mendoza,52114,2,gimnasio;wifi;desayuno
+47,Comercializadora Camino S.A. Hotel,Puerto Madryn,205089,5,restaurant;desayuno
+48,Comercializadora Ibérica S.Com. Hotel,Neuquén,144766,2,restaurant;wifi
+49,Morata y Carrillo S.L.N.E Hotel,Rafaela,241862,1,spa;restaurant;desayuno
+50,Logística Garcés S.L. Hotel,La Plata,186120,2,desayuno;spa
+51,Manufacturas Barroso S.A. Hotel,San Miguel de Tucumán,215001,5,gimnasio;pileta;desayuno;restaurant
+52,Soluciones Diéguez S.L. Hotel,Salta,172324,4,desayuno;spa;restaurant;gimnasio
+53,Supermercados Hervia S.L.N.E Hotel,Cafayate,237073,2,pileta;gimnasio;desayuno;restaurant
+54,Grupo Cabo S.L. Hotel,Tafí del Valle,111984,4,restaurant;pileta
+55,Cruz y Alcázar S.L.N.E Hotel,Tafí del Valle,111228,3,gimnasio;wifi;spa
+56,Alimentación JE S.L. Hotel,Cafayate,100623,4,spa;restaurant;wifi;gimnasio
+57,Soluciones Tamarit & Asociados S.A.D Hotel,Puerto Madryn,126738,5,desayuno;wifi;spa
+58,Supermercados Requena & Asociados S.L.N.E Hotel,Puerto Madryn,142099,5,wifi;gimnasio;desayuno;spa
+59,Grupo Valero S.Coop. Hotel,Córdoba,132211,3,desayuno;gimnasio;spa
+60,Inversiones VDJ S.L.U. Hotel,Neuquén,97520,3,desayuno;wifi;restaurant
+61,Promociones AYGK S.A. Hotel,San Miguel de Tucumán,215341,4,spa;desayuno;restaurant;pileta
+62,Despacho RVZI S.L.N.E Hotel,Rafaela,47069,4,gimnasio;wifi;restaurant;pileta
+63,Hermanos López S.A.T. Hotel,Rafaela,75572,4,wifi;pileta
+64,Manufacturas Santana & Asociados S.A. Hotel,San Rafael,125813,2,pileta;restaurant;desayuno
+65,Grupo Cruz S.L. Hotel,Río Cuarto,237134,4,wifi;desayuno;restaurant
+66,Aránzazu Carmona Belda S.L.N.E Hotel,Tafí del Valle,181405,1,spa;wifi;gimnasio
+67,Dora Moreno Rius S.A.D Hotel,Rafaela,48134,2,wifi;gimnasio
+68,Grau & Asociados S.Com. Hotel,Cafayate,102533,2,restaurant;wifi;spa
+69,Industrias VKUD S.Coop. Hotel,San Miguel de Tucumán,223360,3,spa;gimnasio;wifi
+70,Hnos Coca S.A.T. Hotel,San Rafael,82930,3,gimnasio;wifi
+71,Gaspar Ponce Perea S.A. Hotel,San Miguel de Tucumán,190941,4,restaurant;spa;wifi
+72,Minería Integrales S.A.D Hotel,Mendoza,221040,2,restaurant;pileta
+73,Banco Barreda S.C.P Hotel,Villa Carlos Paz,197394,1,wifi;pileta;desayuno;gimnasio
+74,Talleres VNL S.Com. Hotel,Puerto Madryn,58076,5,pileta;wifi;desayuno;spa
+75,Distribuciones Gras S.A. Hotel,La Plata,153645,3,desayuno;spa;restaurant;wifi
+76,Rosalva Gascón Sáenz S.L.L. Hotel,Salta,176772,3,gimnasio;desayuno;restaurant;spa
+77,Alimentación Roman & Asociados S.C.P Hotel,Salta,195313,3,spa;wifi;pileta
+78,Girón y Company S.L.N.E Hotel,Villa Carlos Paz,103927,4,gimnasio;desayuno;pileta;wifi
+79,Hnos Arregui S.A. Hotel,Neuquén,125200,2,spa;pileta;gimnasio
+80,Macarena Varela Aragonés S.Com. Hotel,San Miguel de Tucumán,113310,5,pileta;gimnasio;wifi;restaurant
+81,Tello y Cabañas S.Coop. Hotel,Tafí del Valle,62442,2,desayuno;restaurant;spa;pileta
+82,Compañía Avanzadas S.L. Hotel,Tafí del Valle,209319,4,wifi;restaurant;pileta
+83,Gibert y Cazorla S.Com. Hotel,Córdoba,146011,2,restaurant;gimnasio;pileta
+84,Compañía Avanzadas S.Coop. Hotel,Tafí del Valle,185089,5,desayuno;gimnasio;pileta
+85,Distribuciones Segovia & Asociados S.L.N.E Hotel,Salta,224249,4,pileta;restaurant;spa
+86,María Pilar Chacón Ramirez S.A. Hotel,San Miguel de Tucumán,229080,2,wifi;gimnasio;spa
+87,Simó & Asociados S.L.L. Hotel,Tafí del Valle,96723,4,restaurant;gimnasio;pileta
+88,Restauración RBWO S.L.N.E Hotel,La Plata,90886,3,pileta;spa
+89,Compañía Internacionales S.L. Hotel,San Miguel de Tucumán,43708,5,pileta;wifi
+90,Hermanos Aznar S.A. Hotel,La Plata,185059,3,spa;desayuno;wifi;gimnasio
+91,Solana & Asociados S.Com. Hotel,Cafayate,114537,4,desayuno;pileta;spa
+92,Comercializadora Fuentes S.A. Hotel,La Plata,106185,4,wifi;desayuno
+93,Gómez & Asociados S.L. Hotel,Neuquén,59420,5,restaurant;wifi;spa;gimnasio
+94,Hotel Internacionales S.Com. Hotel,Cafayate,119648,1,wifi;gimnasio
+95,Suministros Lluch & Asociados S.A. Hotel,Rafaela,149097,5,gimnasio;spa;desayuno;restaurant
+96,Santamaria y asociados S.Coop. Hotel,Villa Carlos Paz,117949,5,pileta;gimnasio;wifi
+97,Tecnologías BQUX S.Com. Hotel,Puerto Madryn,234009,1,restaurant;spa
+98,Finanzas EUJ S.L.N.E Hotel,Cafayate,213127,1,spa;restaurant
+99,Construcción OK S.Coop. Hotel,Cafayate,59677,2,desayuno;restaurant
+100,Banca Privada Inteligentes S.Com. Hotel,Mendoza,195664,4,wifi;spa;pileta

@@ -33,6 +33,22 @@ def crear_relacion(tx, nodo_origen, campo_origen, valor_origen,
     """
     return tx.run(query, valor_origen=valor_origen, valor_destino=valor_destino).single()
 
+def crear_relacion_bidireccional(tx, nodo_origen, campo_origen, valor_origen,
+                                 nodo_destino, campo_destino, valor_destino,
+                                 tipo_relacion):
+    query = f"""
+    MATCH (a:{nodo_origen} {{{campo_origen}: $valor_origen}})
+    MATCH (b:{nodo_destino} {{{campo_destino}: $valor_destino}})
+    MERGE (a)-[r1:{tipo_relacion}]->(b)
+    MERGE (b)-[r2:{tipo_relacion}]->(a)
+    RETURN a, b, r1, r2
+    """
+    return tx.run(
+        query,
+        valor_origen=valor_origen,
+        valor_destino=valor_destino
+    ).single()
+
 
 def nodo_existe(label, driver):
     """
