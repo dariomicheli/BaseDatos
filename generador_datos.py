@@ -2,24 +2,25 @@ import pandas as pd
 import random
 from faker import Faker
 import os
+from collections import defaultdict
 
+# -----------------------------
+# Configuración
+# -----------------------------
 fake = Faker('es_ES')
 Faker.seed(42)
 random.seed(42)
 
-# -----------------------------
-# Configuración de datos Argentina
-# -----------------------------
 provincias_arg = ["Buenos Aires", "Córdoba", "Santa Fe", "Mendoza", "Tucumán", "Salta", "Neuquén", "Chubut"]
 ciudades_arg = {
-    "Buenos Aires": ["La Plata", "Mar del Plata", "Bahía Blanca"],
-    "Córdoba": ["Córdoba", "Villa Carlos Paz", "Río Cuarto"],
-    "Santa Fe": ["Rosario", "Santa Fe", "Rafaela"],
-    "Mendoza": ["Mendoza", "San Rafael"],
-    "Tucumán": ["San Miguel de Tucumán", "Tafí del Valle"],
-    "Salta": ["Salta", "Cafayate"],
-    "Neuquén": ["Neuquén", "San Martín de los Andes"],
-    "Chubut": ["Puerto Madryn", "Trelew"]
+    "Buenos Aires": ["La Plata"],
+    "Córdoba": ["Córdoba"],
+    "Santa Fe": ["Rosario"],
+    "Mendoza": ["Mendoza"],
+    "Tucumán": ["San Miguel de Tucumán"],
+    "Salta": ["Salta"],
+    "Neuquén": ["Neuquén"],
+    "Chubut": ["Puerto Madryn"]
 }
 
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]
@@ -28,8 +29,8 @@ servicios_posibles = ["wifi", "spa", "pileta", "desayuno", "gimnasio", "restaura
 estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada",""]
 
 # Cantidades
-n_usuarios = 500
-n_destinos = 50
+n_usuarios = 50
+n_destinos = 20
 n_hoteles = 100
 n_actividades = 120
 n_reservas = 200
@@ -46,9 +47,10 @@ for i in range(1, n_usuarios+1):
         "email": fake.unique.email(),
         "telefono": fake.phone_number()
     })
+usuario_ids = [u["usuario_id"] for u in usuarios]
 
 # -----------------------------
-# Generar Destinos (Argentina)
+# Generar Destinos
 # -----------------------------
 destinos = []
 for i in range(1, n_destinos+1):
@@ -61,6 +63,7 @@ for i in range(1, n_destinos+1):
         "tipo": random.choice(tipos_destino),
         "precio_promedio": random.randint(50000, 200000)
     })
+destino_ids = [d["destino_id"] for d in destinos]
 
 # -----------------------------
 # Generar Hoteles
@@ -95,66 +98,63 @@ for i in range(1, n_actividades+1):
 # Generar Reservas
 # -----------------------------
 reservas = []
-for i in range(1, n_reservas+1):
-    usuario = random.choice(usuarios)
-    destino = random.choice(destinos)
+
+# Asegurar al menos una reserva por usuario
+for usuario_id in usuario_ids:
+    destino_id = random.choice(destino_ids)
+    destino_precio = next(d["precio_promedio"] for d in destinos if d["destino_id"] == destino_id)
     reservas.append({
-        "reserva_id": i,
-        "usuario_id": usuario["usuario_id"],
-        "destino_id": destino["destino_id"],
+        "reserva_id": len(reservas)+1,
+        "usuario_id": usuario_id,
+        "destino_id": destino_id,
         "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
         "estado": random.choice(estados_reserva),
-        "precio_total": destino["precio_promedio"]
+        "precio_total": destino_precio
+    })
+
+# Agregar reservas adicionales hasta n_reservas
+while len(reservas) < n_reservas:
+    usuario_id = random.choice(usuario_ids)
+    destino_id = random.choice(destino_ids)
+    destino_precio = next(d["precio_promedio"] for d in destinos if d["destino_id"] == destino_id)
+    reservas.append({
+        "reserva_id": len(reservas)+1,
+        "usuario_id": usuario_id,
+        "destino_id": destino_id,
+        "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
+        "estado": random.choice(estados_reserva),
+        "precio_total": destino_precio
     })
 
 # -----------------------------
-# Generar Relaciones entre Usuarios con límites
+# Generar Relaciones
 # -----------------------------
-from collections import defaultdict
-
-max_amigos = 3
+max_amigos = 5
 max_familiares = 2
-n_usuarios = 500
-
 relaciones = []
 amigos_count = defaultdict(int)
 familiares_count = defaultdict(int)
-pares_existentes = set()  # para evitar duplicados
+pares_existentes = set()
 
-while len(relaciones) < 300:  # intentamos generar 300 relaciones
-    usuario1 = random.randint(1, n_usuarios)
-    usuario2 = random.randint(1, n_usuarios)
-    
-    if usuario1 == usuario2:
-        continue
-    
-    # Crear un identificador único para el par (sin importar el orden)
+while len(relaciones) < 300:
+    usuario1, usuario2 = random.sample(usuario_ids, 2)
     par = tuple(sorted((usuario1, usuario2)))
     if par in pares_existentes:
         continue
 
-    # Elegir tipo de relación al azar
-    tipo_relacion = random.choice(["amigo_de", "familiar_de"])
-    
-    # Validar límites
-    if tipo_relacion == "amigo_de":
+    tipo_relacion = random.choice(["AMIGO_DE", "FAMILIAR_DE"])
+
+    if tipo_relacion == "AMIGO_DE":
         if amigos_count[usuario1] >= max_amigos or amigos_count[usuario2] >= max_amigos:
-            continue
-        # Validar que no sean familiares
-        if familiares_count[usuario1] > 0 and familiares_count[usuario2] > 0:
             continue
         amigos_count[usuario1] += 1
         amigos_count[usuario2] += 1
-    else:  # familiar_de
+    else:
         if familiares_count[usuario1] >= max_familiares or familiares_count[usuario2] >= max_familiares:
-            continue
-        # Validar que no sean amigos
-        if amigos_count[usuario1] > 0 and amigos_count[usuario2] > 0:
             continue
         familiares_count[usuario1] += 1
         familiares_count[usuario2] += 1
 
-    # Agregar relación
     relaciones.append({
         "usuario1": usuario1,
         "usuario2": usuario2,
@@ -166,13 +166,8 @@ while len(relaciones) < 300:  # intentamos generar 300 relaciones
 # Guardar CSV
 # -----------------------------
 carpeta_destino = "notebooks/fuentes"
-os.makedirs(carpeta_destino, exist_ok=True) 
+os.makedirs(carpeta_destino, exist_ok=True)
 
-
-
-# -----------------------------
-# Guardar CSV en notebooks/fuentes
-# -----------------------------
 pd.DataFrame(usuarios).to_csv(f"{carpeta_destino}/usuarios.csv", index=False, encoding="utf-8")
 pd.DataFrame(destinos).to_csv(f"{carpeta_destino}/destinos.csv", index=False, encoding="utf-8")
 pd.DataFrame(hoteles).to_csv(f"{carpeta_destino}/hoteles.csv", index=False, encoding="utf-8")

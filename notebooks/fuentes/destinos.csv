@@ -1,51 +1,21 @@
 destino_id,ciudad,pais,tipo,precio_promedio
 1,Córdoba,Argentina,Montaña,114196
 2,Mendoza,Argentina,Cultural,192964
-3,Río Cuarto,Argentina,Aventura,58331
-4,La Plata,Argentina,Playa,110990
-5,Bahía Blanca,Argentina,Playa,192853
-6,Neuquén,Argentina,Aventura,122926
+3,Córdoba,Argentina,Cultural,57811
+4,Córdoba,Argentina,Playa,182475
+5,La Plata,Argentina,Relax,159974
+6,Mendoza,Argentina,Relax,122926
 7,La Plata,Argentina,Aventura,139194
 8,San Miguel de Tucumán,Argentina,Playa,138236
 9,Córdoba,Argentina,Aventura,75353
-10,Cafayate,Argentina,Relax,119342
-11,Bahía Blanca,Argentina,Aventura,190568
-12,Villa Carlos Paz,Argentina,Cultural,194714
-13,Tafí del Valle,Argentina,Relax,100407
-14,Córdoba,Argentina,Playa,125861
-15,Córdoba,Argentina,Cultural,149647
-16,Tafí del Valle,Argentina,Montaña,92638
-17,Cafayate,Argentina,Playa,119986
-18,Río Cuarto,Argentina,Playa,190021
-19,Mendoza,Argentina,Aventura,149471
-20,San Miguel de Tucumán,Argentina,Montaña,64663
-21,Mendoza,Argentina,Montaña,155162
-22,San Miguel de Tucumán,Argentina,Playa,198682
-23,Salta,Argentina,Aventura,153712
-24,Puerto Madryn,Argentina,Montaña,86603
-25,San Rafael,Argentina,Relax,162311
-26,San Martín de los Andes,Argentina,Playa,86262
-27,Puerto Madryn,Argentina,Cultural,78743
-28,Rafaela,Argentina,Playa,160666
-29,Villa Carlos Paz,Argentina,Aventura,172696
-30,San Miguel de Tucumán,Argentina,Cultural,190763
-31,Tafí del Valle,Argentina,Cultural,126939
-32,Neuquén,Argentina,Aventura,50850
-33,San Miguel de Tucumán,Argentina,Relax,77894
-34,San Miguel de Tucumán,Argentina,Playa,148019
-35,Rafaela,Argentina,Relax,50149
-36,Cafayate,Argentina,Cultural,79325
-37,Cafayate,Argentina,Playa,65184
-38,Mendoza,Argentina,Cultural,177399
-39,Río Cuarto,Argentina,Playa,83657
-40,Puerto Madryn,Argentina,Montaña,188326
-41,Neuquén,Argentina,Relax,102730
-42,Tafí del Valle,Argentina,Montaña,164845
-43,Puerto Madryn,Argentina,Playa,108903
-44,Villa Carlos Paz,Argentina,Cultural,195207
-45,Mendoza,Argentina,Cultural,68610
-46,La Plata,Argentina,Cultural,58234
-47,Salta,Argentina,Relax,112391
-48,Tafí del Valle,Argentina,Playa,191356
-49,Rafaela,Argentina,Relax,173907
-50,San Rafael,Argentina,Aventura,99914
+10,Salta,Argentina,Relax,119342
+11,La Plata,Argentina,Relax,82722
+12,Neuquén,Argentina,Relax,126854
+13,Salta,Argentina,Cultural,62012
+14,Mendoza,Argentina,Cultural,111024
+15,Córdoba,Argentina,Montaña,168858
+16,Salta,Argentina,Montaña,143132
+17,Mendoza,Argentina,Cultural,94862
+18,Mendoza,Argentina,Aventura,149471
+19,San Miguel de Tucumán,Argentina,Montaña,64663
+20,Mendoza,Argentina,Montaña,155162

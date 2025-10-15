@@ -1,3 +1,4 @@
+import pandas as pd
 
 def nodo_existe(label, driver):
     """
@@ -67,10 +68,21 @@ def crear_relacion_bidireccional(tx, nodo_origen, campo_origen, valor_origen,
         valor_origen=valor_origen,
         valor_destino=valor_destino
     ).single()
-    
-def obtener_usuarios(tx):
+
+def consulta(db, query):
     """
-    Devuelve la lista de valores únicos de los usuarios, por ejemplo sus IDs
+    Ejecuta una query en Neo4j y devuelve los resultados como un DataFrame.
+
+    Parámetros:
+        db: objeto de conexión a Neo4j (db_neo4j)
+        query: string con la consulta Cypher
+
+    Retorna:
+        pd.DataFrame con los resultados
     """
-    result = tx.run("MATCH (u:Usuario) RETURN u.id AS id")
-    return [record["id"] for record in result]
+    with db.session() as session:
+        resultados = session.run(query)
+        data = [record.data() for record in resultados]
+    return pd.DataFrame(data)
+
+
