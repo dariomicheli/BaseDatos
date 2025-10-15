@@ -20,7 +20,8 @@ ciudades_arg = {
     "Tucumán": ["San Miguel de Tucumán"],
     "Salta": ["Salta"],
     "Neuquén": ["Neuquén"],
-    "Chubut": ["Puerto Madryn"]
+    "Chubut": ["Puerto Madryn"],
+    "Rio Negro":["Bariloche"]
 }
 
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]

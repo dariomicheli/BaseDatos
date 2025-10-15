@@ -69,19 +69,20 @@ def crear_relacion_bidireccional(tx, nodo_origen, campo_origen, valor_origen,
         valor_destino=valor_destino
     ).single()
 
-def consulta(db, query):
+def consulta(db, query, parametros=None):
     """
     Ejecuta una query en Neo4j y devuelve los resultados como un DataFrame.
 
     Parámetros:
         db: objeto de conexión a Neo4j (db_neo4j)
         query: string con la consulta Cypher
+        parametros: diccionario con parámetros de la query (opcional)
 
     Retorna:
         pd.DataFrame con los resultados
     """
     with db.session() as session:
-        resultados = session.run(query)
+        resultados = session.run(query, parametros)
         data = [record.data() for record in resultados]
     return pd.DataFrame(data)
 
