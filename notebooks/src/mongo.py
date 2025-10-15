@@ -15,7 +15,7 @@ def coleccion_existe(db, nombre_coleccion):
     Retorna:
     - True si existe, False si no
     """
-    return nombre_coleccion in db.list_collection_names()
+    return nombre_coleccion in db.list_collection_names()  
 
 
 def obtener_coleccion(nombre_base, nombre_coleccion):

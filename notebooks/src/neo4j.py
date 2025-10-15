@@ -41,7 +41,7 @@ def crear_nodo(tx, nombre_nodo, clave_id, datos):
     return result.single()
 
 
-def crear_relacion(tx, nodo_origen, campo_origen, valor_origen,
+def crear_relacion_unidireccional(tx, nodo_origen, campo_origen, valor_origen,
                    nodo_destino, campo_destino, valor_destino,
                    tipo_relacion):
     query = f"""
