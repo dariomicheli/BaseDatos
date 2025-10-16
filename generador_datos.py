@@ -11,17 +11,57 @@ fake = Faker('es_ES')
 Faker.seed(42)
 random.seed(42)
 
-provincias_arg = ["Buenos Aires", "Córdoba", "Santa Fe", "Mendoza", "Tucumán", "Salta", "Neuquén", "Chubut"]
+provincias_arg = provincias_arg = [
+    "Buenos Aires",
+    "Ciudad Autónoma de Buenos Aires",
+    "Catamarca",
+    "Chaco",
+    "Chubut",
+    "Córdoba",
+    "Corrientes",
+    "Entre Ríos",
+    "Formosa",
+    "Jujuy",
+    "La Pampa",
+    "La Rioja",
+    "Mendoza",
+    "Misiones",
+    "Neuquén",
+    "Río Negro",
+    "Salta",
+    "San Juan",
+    "San Luis",
+    "Santa Cruz",
+    "Santa Fe",
+    "Santiago del Estero",
+    "Tierra del Fuego",
+    "Tucumán"
+]
 ciudades_arg = {
-    "Buenos Aires": ["La Plata"],
-    "Córdoba": ["Córdoba"],
-    "Santa Fe": ["Rosario"],
-    "Mendoza": ["Mendoza"],
-    "Tucumán": ["San Miguel de Tucumán"],
-    "Salta": ["Salta"],
-    "Neuquén": ["Neuquén"],
+    "Buenos Aires": ["La Plata", "Mar del Plata"],
+    "Ciudad Autónoma de Buenos Aires": ["CABA"], 
+    "Catamarca": ["San Fernando"],
+    "Chaco": ["Resistencia"],
     "Chubut": ["Puerto Madryn"],
-    "Rio Negro":["Bariloche"]
+    "Córdoba": ["Córdoba", "Villa Carlos Paz", "Río Cuarto"],
+    "Corrientes": ["Corrientes"],
+    "Entre Ríos": ["Paraná", "Concordia", "Gualeguaychú"],
+    "Formosa": ["Formosa"],
+    "Jujuy": ["San Salvador de Jujuy"],
+    "La Pampa": ["Santa Rosa"],
+    "La Rioja": ["La Rioja", "Chilecito",],
+    "Mendoza": ["Mendoza", "San Rafael"],
+    "Misiones": ["Posadas", "Iguazú"],
+    "Neuquén": ["Neuquén", "San Martín de los Andes"],
+    "Río Negro": ["Bariloche","Viedma"],
+    "Salta": ["Salta"],
+    "San Juan": ["San Juan"],
+    "San Luis": ["San Luis", "Merlo"],
+    "Santa Cruz": ["Río Gallegos","El Calafate"],
+    "Santa Fe": ["Rosario", "Santa Fe"],
+    "Santiago del Estero": ["Santiago del Estero"],
+    "Tierra del Fuego": ["Ushuaia"],
+    "Tucumán": ["San Miguel de Tucumán"]
 }
 
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]
@@ -30,10 +70,9 @@ servicios_posibles = ["wifi", "spa", "pileta", "desayuno", "gimnasio", "restaura
 estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada",""]
 
 # Cantidades
-n_usuarios = 50
-n_destinos = 20
-n_hoteles = 100
-n_actividades = 120
+n_usuarios = 60
+n_hoteles = 5
+n_actividades = 3
 n_reservas = 200
 
 # -----------------------------
@@ -54,114 +93,122 @@ usuario_ids = [u["usuario_id"] for u in usuarios]
 # Generar Destinos
 # -----------------------------
 destinos = []
-for i in range(1, n_destinos+1):
-    provincia = random.choice(provincias_arg)
-    ciudad = random.choice(ciudades_arg[provincia])
-    destinos.append({
-        "destino_id": i,
-        "ciudad": ciudad,
-        "pais": "Argentina",
-        "tipo": random.choice(tipos_destino),
-        "precio_promedio": random.randint(50000, 200000)
-    })
-destino_ids = [d["destino_id"] for d in destinos]
+destino_id = 1
+
+for provincia in provincias_arg:
+    for ciudad in ciudades_arg[provincia]:
+        destinos.append({
+            "destino_id": destino_id,
+            "provincia": provincia,
+            "ciudad": ciudad,
+            "pais": "Argentina",
+            "tipo": random.choice(tipos_destino),
+            "precio_promedio": random.randint(50000, 200000)
+        })
+        destino_id += 1
 
 # -----------------------------
 # Generar Hoteles
 # -----------------------------
 hoteles = []
-for i in range(1, n_hoteles+1):
-    destino = random.choice(destinos)
-    hoteles.append({
-        "hotel_id": i,
-        "nombre": f"{fake.company()} Hotel",
-        "ciudad": destino["ciudad"],
-        "precio": random.randint(40000, 250000),
-        "calificacion": random.randint(1,5),
-        "servicios": ";".join(random.sample(servicios_posibles, random.randint(2,4)))
-    })
+hotel_id = 1
+for destino in destinos:
+    n_hoteles_ciudad = random.randint(1, n_hoteles)
+    for _ in range(n_hoteles_ciudad):
+        hoteles.append({
+            "hotel_id": hotel_id,
+            "nombre": f"{fake.company()} Hotel",
+            "ciudad": destino["ciudad"],
+            "provincia": destino["provincia"],
+            "precio": random.randint(40000, 250000),
+            "calificacion": random.randint(1, 5),
+            "servicios": ";".join(random.sample(servicios_posibles, random.randint(2, 4)))
+        })
+        hotel_id += 1
 
 # -----------------------------
 # Generar Actividades
 # -----------------------------
 actividades = []
-for i in range(1, n_actividades+1):
-    destino = random.choice(destinos)
-    actividades.append({
-        "actividad_id": i,
-        "nombre": fake.catch_phrase(),
-        "tipo": random.choice(tipos_actividad),
-        "ciudad": destino["ciudad"],
-        "precio": random.randint(20000, 80000)
-    })
+actividad_id = 1
+n_actividades_ciudad = 3
+
+for destino in destinos:
+    for _ in range(n_actividades_ciudad):
+        actividades.append({
+            "actividad_id": actividad_id,
+            "nombre": fake.catch_phrase(),
+            "tipo": random.choice(tipos_actividad),
+            "ciudad": destino["ciudad"],
+            "provincia": destino["provincia"],
+            "precio": random.randint(20000, 80000)
+        })
+        actividad_id += 1
 
 # -----------------------------
 # Generar Reservas
 # -----------------------------
 reservas = []
+reserva_id = 1
 
-# Asegurar al menos una reserva por usuario
-for usuario_id in usuario_ids:
-    destino_id = random.choice(destino_ids)
-    destino_precio = next(d["precio_promedio"] for d in destinos if d["destino_id"] == destino_id)
-    reservas.append({
-        "reserva_id": len(reservas)+1,
-        "usuario_id": usuario_id,
-        "destino_id": destino_id,
-        "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
-        "estado": random.choice(estados_reserva),
-        "precio_total": destino_precio
-    })
+# Índice auxiliar: ciudad → destino_id y precio
+destino_por_ciudad = {
+    d["ciudad"]: {"id": d["destino_id"], "precio": d["precio_promedio"]}
+    for d in destinos
+}
 
-# Agregar reservas adicionales hasta n_reservas
-while len(reservas) < n_reservas:
-    usuario_id = random.choice(usuario_ids)
-    destino_id = random.choice(destino_ids)
-    destino_precio = next(d["precio_promedio"] for d in destinos if d["destino_id"] == destino_id)
-    reservas.append({
-        "reserva_id": len(reservas)+1,
-        "usuario_id": usuario_id,
-        "destino_id": destino_id,
-        "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
-        "estado": random.choice(estados_reserva),
-        "precio_total": destino_precio
-    })
+# Diccionario para controlar cuántas reservas tiene cada usuario
+reservas_usuario = {u["usuario_id"]: [] for u in usuarios}
 
-# -----------------------------
-# Generar Relaciones
-# -----------------------------
-max_amigos = 5
-max_familiares = 2
-relaciones = []
-amigos_count = defaultdict(int)
-familiares_count = defaultdict(int)
-pares_existentes = set()
+#  Cada hotel tiene entre 30 y 50 reservas
+for hotel in hoteles:
+    ciudad_hotel = hotel["ciudad"]
+    destino_info = destino_por_ciudad[ciudad_hotel]
+    destino_id = destino_info["id"]
+    destino_precio = destino_info["precio"]
 
-while len(relaciones) < 300:
-    usuario1, usuario2 = random.sample(usuario_ids, 2)
-    par = tuple(sorted((usuario1, usuario2)))
-    if par in pares_existentes:
-        continue
+    # Número aleatorio de reservas por hotel
+    n_reservas_hotel = random.randint(5,30)
 
-    tipo_relacion = random.choice(["AMIGO_DE", "FAMILIAR_DE"])
+    for _ in range(n_reservas_hotel):
+        usuario_id = random.choice(usuario_ids)
+        reservas.append({
+            "reserva_id": reserva_id,
+            "usuario_id": usuario_id,
+            "destino_id": destino_id,
+            "hotel_id": hotel["hotel_id"],
+            "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
+            "estado": random.choice(estados_reserva),
+            "precio_total": destino_precio + random.randint(-10000, 10000)  # pequeña variación
+        })
+        reservas_usuario[usuario_id].append(destino_id)
+        reserva_id += 1
 
-    if tipo_relacion == "AMIGO_DE":
-        if amigos_count[usuario1] >= max_amigos or amigos_count[usuario2] >= max_amigos:
-            continue
-        amigos_count[usuario1] += 1
-        amigos_count[usuario2] += 1
-    else:
-        if familiares_count[usuario1] >= max_familiares or familiares_count[usuario2] >= max_familiares:
-            continue
-        familiares_count[usuario1] += 1
-        familiares_count[usuario2] += 1
+#  Asegurar que cada usuario tenga al menos 5 reservas en distintas ciudades
+ciudades_disponibles = list(destino_por_ciudad.keys())
 
-    relaciones.append({
-        "usuario1": usuario1,
-        "usuario2": usuario2,
-        "tipo": tipo_relacion
-    })
-    pares_existentes.add(par)
+for usuario_id, destinos_usuario in reservas_usuario.items():
+    ciudades_reservadas = {d for d in destinos_usuario}
+    faltan = 5 - len(ciudades_reservadas)
+    if faltan > 0:
+        nuevas_ciudades = random.sample(
+            [c for c in ciudades_disponibles if destino_por_ciudad[c]["id"] not in ciudades_reservadas],
+            faltan
+        )
+        for ciudad in nuevas_ciudades:
+            destino_info = destino_por_ciudad[ciudad]
+            reservas.append({
+                "reserva_id": reserva_id,
+                "usuario_id": usuario_id,
+                "destino_id": destino_info["id"],
+                "hotel_id": random.choice([h["hotel_id"] for h in hoteles if h["ciudad"] == ciudad]),
+                "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
+                "estado": random.choice(estados_reserva),
+                "precio_total": destino_info["precio"] + random.randint(-10000, 10000)
+            })
+            reserva_id += 1
+
+print(f"✅ Total de reservas generadas: {len(reservas)}")
 
 # -----------------------------
 # Guardar CSV
@@ -174,4 +221,69 @@ pd.DataFrame(destinos).to_csv(f"{carpeta_destino}/destinos.csv", index=False, en
 pd.DataFrame(hoteles).to_csv(f"{carpeta_destino}/hoteles.csv", index=False, encoding="utf-8")
 pd.DataFrame(actividades).to_csv(f"{carpeta_destino}/actividades.csv", index=False, encoding="utf-8")
 pd.DataFrame(reservas).to_csv(f"{carpeta_destino}/reservas.csv", index=False, encoding="utf-8")
+
+
+print(f"✅ Archivos generados correctamente")
+
+import pandas as pd
+import random
+from collections import defaultdict
+from itertools import combinations
+
+# -----------------------------
+# Configuración
+# -----------------------------
+random.seed(42)
+
+usuario_ids = list(range(1, n_usuarios+1))
+
+# Máximos de relaciones
+max_amigos = 8
+max_familiares = 2
+
+# -----------------------------
+# Generar relaciones
+# -----------------------------
+
+# Generar todos los pares posibles y mezclarlos
+pares_posibles = list(combinations(usuario_ids, 2))
+random.shuffle(pares_posibles)
+
+# Diccionarios para contar relaciones
+amigos_count = defaultdict(int)
+familiares_count = defaultdict(int)
+
+# Lista de relaciones
+relaciones = []
+
+for usuario1, usuario2 in pares_posibles:
+    if len(relaciones) >= 300:
+        break
+
+    # Elegir tipo de relación
+    tipo_relacion = random.choice(["AMIGO_DE", "FAMILIAR_DE"])
+
+    # Validar límites
+    if tipo_relacion == "AMIGO_DE":
+        if amigos_count[usuario1] >= max_amigos or amigos_count[usuario2] >= max_amigos:
+            continue
+        amigos_count[usuario1] += 1
+        amigos_count[usuario2] += 1
+    else:
+        if familiares_count[usuario1] >= max_familiares or familiares_count[usuario2] >= max_familiares:
+            continue
+        familiares_count[usuario1] += 1
+        familiares_count[usuario2] += 1
+
+    # Agregar relación
+    relaciones.append({
+        "usuario1": usuario1,
+        "usuario2": usuario2,
+        "tipo": tipo_relacion
+    })
+
+# -----------------------------
+# Guardar CSV
+# -----------------------------
 pd.DataFrame(relaciones).to_csv(f"{carpeta_destino}/usuarios_relaciones.csv", index=False, encoding="utf-8")
+print(f"Se generaron {len(relaciones)} relaciones para {len(usuario_ids)} usuarios.")
