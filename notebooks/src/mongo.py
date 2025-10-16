@@ -157,3 +157,33 @@ def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
     datos = df.to_dict(orient="records")
 
     return insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado)
+
+def contador(nombre_base, coleccion, agrupacion, campo_calculo, operacion):
+    """
+    Realiza una agregación tipo group en MongoDB.
+
+    Parámetros:
+        nombre_base: objeto de conexión a la base de datos (MongoClient[nombre_base])
+        coleccion: nombre de la colección (str)
+        agrupacion: nombre del campo por el que agrupo (str)
+        campo_calculo: nombre del nuevo campo calculado (str)
+        operacion: operación MongoDB ('$sum', '$avg', etc.)
+    Retorna:
+        Resultado de la agregación como lista de diccionarios
+    """
+
+    db = client[nombre_base]  # Obtengo la base
+    coll = db[coleccion]      # Obtengl coleccion
+
+#Armo mis agrupaciones dinamicas
+    pipeline = [
+        {
+            "$group": {
+                "_id": f"${agrupacion}",
+                campo_calculo: {operacion: 1}  # por ejemplo: {"total": {"$sum": 1}}
+            }
+        }
+    ]
+
+    resultado = list(coll.aggregate(pipeline))
+    return resultado
