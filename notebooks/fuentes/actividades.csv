@@ -1,121 +1,112 @@
-actividad_id,nombre,tipo,ciudad,precio
-1,Synergized needs-based capacity,aventura,Mendoza,53857
-2,Phased grid-enabled instruction set,aventura,La Plata,35817
-3,Organic user-facing project,relax,Mendoza,56384
-4,Ameliorated explicit core,relax,San Miguel de Tucumán,62329
-5,Cloned 3rdgeneration website,relax,Salta,71965
-6,Focused multi-state project,aventura,Córdoba,39283
-7,Managed incremental paradigm,relax,San Miguel de Tucumán,65336
-8,Mandatory solution-oriented project,gastronómica,San Miguel de Tucumán,63513
-9,Inverse mobile parallelism,gastronómica,San Miguel de Tucumán,51015
-10,Synchronized tangible moderator,deportiva,Mendoza,42528
-11,Reactive leadingedge knowledgebase,deportiva,Mendoza,41678
-12,Innovative non-volatile capacity,relax,Neuquén,37754
-13,Integrated composite utilization,gastronómica,Salta,35108
-14,Fundamental discrete matrices,cultural,Córdoba,40679
-15,Multi-layered executive throughput,deportiva,Córdoba,69950
-16,Business-focused client-server help-desk,cultural,Mendoza,34180
-17,Horizontal logistical concept,gastronómica,Salta,67486
-18,Secured cohesive structure,deportiva,San Miguel de Tucumán,59111
-19,Public-key executive contingency,aventura,Salta,74567
-20,Enhanced tertiary solution,gastronómica,La Plata,34908
-21,Synchronized coherent complexity,cultural,Neuquén,39809
-22,Front-line bifurcated analyzer,deportiva,Córdoba,28295
-23,Intuitive object-oriented capacity,aventura,Córdoba,23573
-24,Organic empowering hub,gastronómica,Mendoza,65705
-25,Enterprise-wide demand-driven open architecture,relax,La Plata,26723
-26,Triple-buffered 5thgeneration secured line,deportiva,Córdoba,38634
-27,Intuitive grid-enabled circuit,relax,Salta,48866
-28,Multi-layered local moratorium,cultural,La Plata,23367
-29,Diverse national framework,relax,Córdoba,27476
-30,Decentralized 4thgeneration initiative,relax,Córdoba,52227
-31,Proactive zero administration circuit,deportiva,Córdoba,61251
-32,Persevering foreground collaboration,cultural,Mendoza,29777
-33,Adaptive user-facing moratorium,gastronómica,San Miguel de Tucumán,25582
-34,Profit-focused full-range project,aventura,San Miguel de Tucumán,56573
-35,Triple-buffered explicit leverage,deportiva,Mendoza,59067
-36,Implemented web-enabled orchestration,cultural,Mendoza,70835
-37,Synchronized client-server website,relax,Mendoza,49524
-38,Re-contextualized upward-trending intranet,gastronómica,Córdoba,76371
-39,Mandatory system-worthy budgetary management,relax,San Miguel de Tucumán,40013
-40,Upgradable mission-critical analyzer,deportiva,San Miguel de Tucumán,23947
-41,Devolved systematic neural-net,aventura,Mendoza,69986
-42,Customizable fault-tolerant algorithm,cultural,La Plata,37343
-43,Open-architected regional definition,cultural,Córdoba,35719
-44,Organized heuristic array,deportiva,Mendoza,24919
-45,Inverse analyzing portal,aventura,Mendoza,46772
-46,Stand-alone content-based paradigm,deportiva,Córdoba,50796
-47,Progressive directional toolset,aventura,Salta,35170
-48,Visionary even-keeled customer loyalty,gastronómica,Salta,66070
-49,Ameliorated attitude-oriented monitoring,aventura,Córdoba,65048
-50,Organized systematic secured line,gastronómica,San Miguel de Tucumán,71631
-51,Cross-group multimedia infrastructure,cultural,San Miguel de Tucumán,47861
-52,Ergonomic mobile functionalities,deportiva,Córdoba,34733
-53,Robust real-time migration,gastronómica,La Plata,74174
-54,Centralized static hierarchy,aventura,La Plata,23908
-55,Object-based client-server structure,gastronómica,Mendoza,58996
-56,Optimized holistic info-mediaries,gastronómica,San Miguel de Tucumán,48780
-57,Multi-layered 24/7 forecast,relax,Córdoba,65133
-58,Monitored grid-enabled function,relax,Salta,37841
-59,Organized next generation array,deportiva,Mendoza,52361
-60,Extended upward-trending intranet,aventura,Córdoba,59192
-61,User-centric intangible website,relax,Mendoza,68138
-62,Organic executive complexity,deportiva,La Plata,36408
-63,Upgradable interactive superstructure,aventura,Córdoba,35002
-64,Operative client-driven parallelism,deportiva,San Miguel de Tucumán,21359
-65,Right-sized background circuit,deportiva,Córdoba,22636
-66,Expanded exuding leverage,relax,Mendoza,54010
-67,Progressive full-range architecture,gastronómica,Córdoba,31894
-68,Reverse-engineered web-enabled implementation,relax,San Miguel de Tucumán,61601
-69,Cross-group 24hour installation,aventura,Salta,50802
-70,Sharable encompassing instruction set,relax,Neuquén,41843
-71,Enhanced next generation Local Area Network,aventura,La Plata,76212
-72,Triple-buffered non-volatile system engine,gastronómica,Mendoza,46977
-73,Devolved dedicated contingency,gastronómica,Salta,63423
-74,Multi-tiered explicit neural-net,deportiva,Salta,22404
-75,Pre-emptive 6thgeneration framework,aventura,Córdoba,40612
-76,Reduced exuding methodology,gastronómica,Córdoba,27597
-77,Realigned user-facing Local Area Network,deportiva,Salta,74062
-78,Face-to-face 4thgeneration utilization,deportiva,Córdoba,50276
-79,Adaptive coherent firmware,aventura,Mendoza,32293
-80,Innovative scalable productivity,gastronómica,Mendoza,60804
-81,Phased bottom-line projection,relax,Salta,69806
-82,Synchronized executive instruction set,cultural,Mendoza,37501
-83,Enhanced mobile solution,cultural,Mendoza,38876
-84,Stand-alone dynamic algorithm,relax,Córdoba,27957
-85,Decentralized well-modulated focus group,deportiva,Córdoba,72383
-86,Proactive asymmetric policy,cultural,San Miguel de Tucumán,40365
-87,User-friendly high-level paradigm,aventura,Mendoza,56192
-88,Polarized non-volatile Internet solution,aventura,Mendoza,34725
-89,Fundamental responsive software,relax,Córdoba,27698
-90,Phased system-worthy capability,relax,La Plata,66963
-91,Multi-layered multimedia superstructure,deportiva,Salta,66229
-92,Re-engineered 3rdgeneration firmware,relax,Córdoba,74704
-93,Diverse optimal approach,relax,Salta,35973
-94,Digitized foreground Local Area Network,deportiva,Córdoba,29479
-95,Team-oriented client-driven help-desk,cultural,Salta,59280
-96,Diverse actuating flexibility,cultural,Mendoza,76624
-97,Multi-lateral intangible productivity,gastronómica,Córdoba,70638
-98,Multi-channeled actuating frame,gastronómica,Mendoza,71623
-99,Implemented multi-tasking productivity,gastronómica,Mendoza,73775
-100,Compatible multimedia core,gastronómica,Córdoba,67582
-101,Visionary responsive contingency,deportiva,Salta,58005
-102,Virtual bandwidth-monitored policy,cultural,Salta,49264
-103,Versatile composite moratorium,relax,Mendoza,42618
-104,Inverse foreground software,deportiva,La Plata,69995
-105,Innovative encompassing software,relax,Mendoza,49841
-106,Total system-worthy hierarchy,cultural,La Plata,65711
-107,Cross-platform national paradigm,deportiva,San Miguel de Tucumán,45098
-108,Multi-channeled client-server access,relax,San Miguel de Tucumán,22860
-109,Devolved multi-state forecast,relax,La Plata,66217
-110,Multi-layered zero-defect matrix,relax,Salta,63495
-111,Open-source global complexity,relax,La Plata,22426
-112,Customer-focused didactic collaboration,deportiva,La Plata,58678
-113,Profit-focused directional core,aventura,La Plata,77290
-114,Realigned reciprocal solution,aventura,Córdoba,54468
-115,Progressive national structure,aventura,Córdoba,67346
-116,Reactive tangible system engine,relax,La Plata,77077
-117,Customizable intangible knowledgebase,aventura,La Plata,50768
-118,Compatible bifurcated capacity,gastronómica,Córdoba,60845
-119,Ameliorated mission-critical hardware,aventura,Salta,75821
-120,Integrated system-worthy hierarchy,deportiva,La Plata,44904
+actividad_id,nombre,tipo,ciudad,provincia,precio
+1,Extended zero administration challenge,gastronómica,La Plata,Buenos Aires,20927
+2,Virtual eco-centric frame,deportiva,La Plata,Buenos Aires,28295
+3,Inverse bottom-line ability,gastronómica,La Plata,Buenos Aires,22982
+4,Proactive value-added Internet solution,aventura,Mar del Plata,Buenos Aires,56264
+5,Enhanced clear-thinking implementation,gastronómica,Mar del Plata,Buenos Aires,65705
+6,Public-key tertiary emulation,cultural,Mar del Plata,Buenos Aires,61803
+7,Profit-focused next generation secured line,relax,CABA,Ciudad Autónoma de Buenos Aires,26723
+8,Multi-channeled asynchronous infrastructure,aventura,CABA,Ciudad Autónoma de Buenos Aires,57621
+9,User-centric 6thgeneration Internet solution,gastronómica,CABA,Ciudad Autónoma de Buenos Aires,50762
+10,Ameliorated logistical archive,relax,San Fernando,Catamarca,48866
+11,Intuitive object-oriented interface,gastronómica,San Fernando,Catamarca,32082
+12,Re-engineered impactful strategy,aventura,San Fernando,Catamarca,36546
+13,Sharable intangible frame,relax,Resistencia,Chaco,27476
+14,Customizable impactful adapter,aventura,Resistencia,Chaco,46260
+15,Inverse composite website,relax,Resistencia,Chaco,24855
+16,Secured logistical solution,deportiva,Puerto Madryn,Chubut,61251
+17,Multi-lateral background Internet solution,aventura,Puerto Madryn,Chubut,29943
+18,Customer-focused dynamic Internet solution,cultural,Puerto Madryn,Chubut,73159
+19,Reverse-engineered impactful moderator,deportiva,Córdoba,Córdoba,39912
+20,Configurable hybrid function,aventura,Córdoba,Córdoba,36265
+21,User-friendly global definition,aventura,Córdoba,Córdoba,56573
+22,Managed zero-defect concept,relax,Villa Carlos Paz,Córdoba,59735
+23,Compatible multimedia productivity,deportiva,Villa Carlos Paz,Córdoba,71821
+24,Customizable multi-tasking migration,deportiva,Villa Carlos Paz,Córdoba,34790
+25,Ergonomic zero-defect hardware,deportiva,Río Cuarto,Córdoba,44928
+26,Monitored upward-trending project,relax,Río Cuarto,Córdoba,79539
+27,Digitized disintermediate benchmark,relax,Río Cuarto,Córdoba,39487
+28,Digitized eco-centric customer loyalty,deportiva,Corrientes,Corrientes,48103
+29,Enhanced real-time collaboration,gastronómica,Corrientes,Corrientes,57265
+30,Virtual well-modulated projection,deportiva,Corrientes,Corrientes,23947
+31,Compatible context-sensitive throughput,deportiva,Paraná,Entre Ríos,68502
+32,Self-enabling modular Local Area Network,aventura,Paraná,Entre Ríos,69986
+33,Versatile non-volatile task-force,cultural,Paraná,Entre Ríos,60993
+34,Reduced local software,cultural,Concordia,Entre Ríos,37343
+35,Re-contextualized secondary productivity,aventura,Concordia,Entre Ríos,30292
+36,Secured fresh-thinking product,cultural,Concordia,Entre Ríos,31391
+37,Intuitive coherent intranet,deportiva,Gualeguaychú,Entre Ríos,24919
+38,Cloned methodical intranet,cultural,Gualeguaychú,Entre Ríos,20175
+39,Self-enabling exuding utilization,relax,Gualeguaychú,Entre Ríos,49524
+40,Grass-roots optimizing approach,deportiva,Formosa,Formosa,50796
+41,Multi-channeled motivating archive,gastronómica,Formosa,Formosa,22139
+42,Integrated maximized knowledge user,cultural,Formosa,Formosa,38881
+43,Automated analyzing hub,gastronómica,San Salvador de Jujuy,Jujuy,66070
+44,Horizontal asynchronous project,relax,San Salvador de Jujuy,Jujuy,24664
+45,Cross-group reciprocal policy,cultural,San Salvador de Jujuy,Jujuy,37337
+46,Profit-focused human-resource Local Area Network,deportiva,Santa Rosa,La Pampa,63331
+47,Reduced neutral utilization,cultural,Santa Rosa,La Pampa,47861
+48,User-centric 6thgeneration knowledge user,aventura,Santa Rosa,La Pampa,55688
+49,Re-engineered solution-oriented core,cultural,La Rioja,La Rioja,62443
+50,Inverse real-time leverage,cultural,La Rioja,La Rioja,79533
+51,Profit-focused coherent approach,gastronómica,La Rioja,La Rioja,74174
+52,Organized bi-directional workforce,cultural,Chilecito,La Rioja,24679
+53,Mandatory transitional artificial intelligence,aventura,Chilecito,La Rioja,30873
+54,Profit-focused secondary conglomeration,gastronómica,Chilecito,La Rioja,58996
+55,Balanced dynamic strategy,deportiva,Mendoza,Mendoza,38914
+56,Organic leadingedge moderator,relax,Mendoza,Mendoza,28149
+57,Programmable reciprocal complexity,relax,Mendoza,Mendoza,65133
+58,Multi-lateral holistic forecast,gastronómica,San Rafael,Mendoza,65857
+59,Networked incremental time-frame,relax,San Rafael,Mendoza,37841
+60,Mandatory systematic policy,deportiva,San Rafael,Mendoza,55388
+61,Business-focused responsive project,relax,Posadas,Misiones,48688
+62,Managed asymmetric groupware,aventura,Posadas,Misiones,59192
+63,Cross-platform next generation service-desk,aventura,Posadas,Misiones,78289
+64,Networked executive extranet,relax,Iguazú,Misiones,68138
+65,Up-sized stable portal,gastronómica,Iguazú,Misiones,59564
+66,Distributed full-range artificial intelligence,gastronómica,Iguazú,Misiones,21695
+67,Reduced stable circuit,aventura,Neuquén,Neuquén,35002
+68,Monitored fault-tolerant projection,deportiva,Neuquén,Neuquén,58477
+69,Total stable infrastructure,aventura,Neuquén,Neuquén,70119
+70,De-engineered radical strategy,gastronómica,San Martín de los Andes,Neuquén,57764
+71,Configurable fault-tolerant open architecture,aventura,San Martín de los Andes,Neuquén,70011
+72,Multi-tiered secondary utilization,cultural,San Martín de los Andes,Neuquén,50834
+73,Managed clear-thinking secured line,deportiva,Bariloche,Río Negro,62697
+74,Total user-facing software,relax,Bariloche,Río Negro,38229
+75,Progressive background project,cultural,Bariloche,Río Negro,58360
+76,Synchronized interactive migration,relax,Viedma,Río Negro,61601
+77,Multi-lateral 3rdgeneration hierarchy,relax,Viedma,Río Negro,25979
+78,Integrated contextually-based data-warehouse,relax,Viedma,Río Negro,42803
+79,Mandatory zero administration matrix,relax,Salta,Salta,41843
+80,Ergonomic directional challenge,gastronómica,Salta,Salta,63917
+81,Distributed asynchronous frame,aventura,Salta,Salta,76212
+82,Cross-platform motivating throughput,cultural,San Juan,San Juan,41614
+83,Quality-focused user-facing moderator,relax,San Juan,San Juan,65460
+84,Automated stable Graphical User Interface,relax,San Juan,San Juan,38888
+85,Visionary regional capacity,relax,San Luis,San Luis,73317
+86,Right-sized homogeneous collaboration,deportiva,San Luis,San Luis,22404
+87,Diverse contextually-based solution,relax,San Luis,San Luis,25771
+88,Visionary regional workforce,gastronómica,Merlo,San Luis,36541
+89,Down-sized uniform intranet,gastronómica,Merlo,San Luis,27597
+90,Balanced incremental hierarchy,relax,Merlo,San Luis,76682
+91,Synergistic uniform encoding,deportiva,Río Gallegos,Santa Cruz,74062
+92,Organic reciprocal forecast,aventura,Río Gallegos,Santa Cruz,63100
+93,Versatile value-added toolset,deportiva,Río Gallegos,Santa Cruz,50276
+94,Organized discrete monitoring,relax,El Calafate,Santa Cruz,23552
+95,Front-line fault-tolerant workforce,cultural,El Calafate,Santa Cruz,53976
+96,Phased content-based hub,gastronómica,El Calafate,Santa Cruz,60804
+97,Synergistic object-oriented intranet,relax,Rosario,Santa Fe,60986
+98,Persistent zero administration forecast,relax,Rosario,Santa Fe,69806
+99,Vision-oriented homogeneous middleware,aventura,Rosario,Santa Fe,33340
+100,Progressive intangible complexity,gastronómica,Santa Fe,Santa Fe,55993
+101,Exclusive real-time challenge,cultural,Santa Fe,Santa Fe,38876
+102,Function-based actuating project,relax,Santa Fe,Santa Fe,77727
+103,Polarized holistic neural-net,relax,Santiago del Estero,Santiago del Estero,27957
+104,Customer-focused transitional model,aventura,Santiago del Estero,Santiago del Estero,61289
+105,Decentralized executive artificial intelligence,deportiva,Santiago del Estero,Santiago del Estero,72383
+106,Virtual cohesive flexibility,cultural,Ushuaia,Tierra del Fuego,66516
+107,Organized multimedia circuit,cultural,Ushuaia,Tierra del Fuego,40365
+108,Optional background definition,deportiva,Ushuaia,Tierra del Fuego,20896
+109,Organized grid-enabled algorithm,deportiva,San Miguel de Tucumán,Tucumán,46738
+110,Operative actuating infrastructure,aventura,San Miguel de Tucumán,Tucumán,34725
+111,Profit-focused holistic encoding,aventura,San Miguel de Tucumán,Tucumán,50241

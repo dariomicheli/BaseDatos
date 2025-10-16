@@ -1,21 +1,38 @@
-destino_id,ciudad,pais,tipo,precio_promedio
-1,Córdoba,Argentina,Montaña,114196
-2,Mendoza,Argentina,Cultural,192964
-3,Azul,Argentina,Cultural,57811
-4,New York,Argentina,Playa,182475
-5,La Plata,Argentina,Relax,159974
-6,Mendoza,Argentina,Relax,122926
-7,La Plata,Argentina,Aventura,139194
-8,San Miguel de Tucumán,Argentina,Playa,138236
-9,Córdoba,Argentina,Aventura,75353
-10,Salta,Argentina,Relax,119342
-11,La Plata,Argentina,Relax,82722
-12,Neuquén,Argentina,Relax,126854
-13,Salta,Argentina,Cultural,62012
-14,Mendoza,Argentina,Cultural,111024
-15,Córdoba,Argentina,Montaña,168858
-16,Salta,Argentina,Montaña,143132
-17,Mendoza,Argentina,Cultural,94862
-18,Mendoza,Argentina,Aventura,149471
-19,San Miguel de Tucumán,Argentina,Montaña,64663
-20,Mendoza,Argentina,Montaña,155162
+destino_id,provincia,ciudad,pais,tipo,precio_promedio
+1,Buenos Aires,La Plata,Argentina,Cultural,56556
+2,Buenos Aires,Mar del Plata,Argentina,Montaña,114196
+3,Ciudad Autónoma de Buenos Aires,CABA,Argentina,Playa,86579
+4,Catamarca,San Fernando,Argentina,Cultural,192964
+5,Chaco,Resistencia,Argentina,Cultural,160604
+6,Chubut,Puerto Madryn,Argentina,Cultural,57811
+7,Córdoba,Córdoba,Argentina,Cultural,107314
+8,Córdoba,Villa Carlos Paz,Argentina,Playa,182475
+9,Córdoba,Río Cuarto,Argentina,Relax,56956
+10,Corrientes,Corrientes,Argentina,Relax,102124
+11,Entre Ríos,Paraná,Argentina,Relax,159974
+12,Entre Ríos,Concordia,Argentina,Playa,167757
+13,Entre Ríos,Gualeguaychú,Argentina,Relax,122926
+14,Formosa,Formosa,Argentina,Cultural,91853
+15,Jujuy,San Salvador de Jujuy,Argentina,Aventura,139194
+16,La Pampa,Santa Rosa,Argentina,Montaña,90758
+17,La Rioja,La Rioja,Argentina,Playa,138236
+18,La Rioja,Chilecito,Argentina,Cultural,74312
+19,Mendoza,Mendoza,Argentina,Aventura,75353
+20,Mendoza,San Rafael,Argentina,Montaña,140165
+21,Misiones,Posadas,Argentina,Relax,119342
+22,Misiones,Iguazú,Argentina,Cultural,170435
+23,Neuquén,Neuquén,Argentina,Relax,82722
+24,Neuquén,San Martín de los Andes,Argentina,Aventura,70656
+25,Río Negro,Bariloche,Argentina,Relax,126854
+26,Río Negro,Viedma,Argentina,Relax,144800
+27,Salta,Salta,Argentina,Relax,100407
+28,San Juan,San Juan,Argentina,Cultural,62012
+29,San Luis,San Luis,Argentina,Playa,125861
+30,San Luis,Merlo,Argentina,Cultural,111024
+31,Santa Cruz,Río Gallegos,Argentina,Cultural,149647
+32,Santa Cruz,El Calafate,Argentina,Montaña,168858
+33,Santa Fe,Rosario,Argentina,Montaña,92638
+34,Santa Fe,Santa Fe,Argentina,Montaña,143132
+35,Santiago del Estero,Santiago del Estero,Argentina,Playa,119986
+36,Tierra del Fuego,Ushuaia,Argentina,Cultural,94862
+37,Tucumán,San Miguel de Tucumán,Argentina,Relax,114175
