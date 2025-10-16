@@ -158,32 +158,47 @@ def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
 
     return insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado)
 
-def contador(nombre_base, coleccion, agrupacion, campo_calculo, operacion):
+def contador(nombre_base, coleccion, agrupacion=None, campo_calculo="cantidad", filtrar=None):
     """
-    Realiza una agregación tipo group en MongoDB.
+    Realiza un conteo (u operación genérica) de documentos en MongoDB con opción de agrupar y filtrar.
 
     Parámetros:
-        nombre_base: objeto de conexión a la base de datos (MongoClient[nombre_base])
-        coleccion: nombre de la colección (str)
-        agrupacion: nombre del campo por el que agrupo (str)
-        campo_calculo: nombre del nuevo campo calculado (str)
-        operacion: operación MongoDB ('$sum', '$avg', etc.)
+        nombre_base: str, nombre de la base de datos
+        coleccion: str, nombre de la colección
+        agrupacion: str o None, campo por el que agrupar. Si None, no agrupa
+        campo_calculo: str, nombre del campo de salida para el conteo
+        filtrar: dict o None, filtro tipo {"campo": valor} para usar en $match
+    
     Retorna:
-        Resultado de la agregación como lista de diccionarios
+        Lista de diccionarios con el resultado de la agregación
     """
 
-    db = client[nombre_base]  # Obtengo la base
-    coll = db[coleccion]      # Obtengl coleccion
+    db = client[nombre_base]
+    coll = db[coleccion]
 
-#Armo mis agrupaciones dinamicas
-    pipeline = [
-        {
+    pipeline = []
+
+    # Si hay filtro, agregamos $match
+    if filtrar:
+        pipeline.append({"$match": filtrar})
+
+    # Si se indica agrupación, agregamos $group
+    if agrupacion:
+        pipeline.append({
             "$group": {
                 "_id": f"${agrupacion}",
-                campo_calculo: {operacion: 1}  # por ejemplo: {"total": {"$sum": 1}}
+                campo_calculo: {"$sum": 1}
             }
-        }
-    ]
+        })
+    else:
+        # Si no hay agrupación, solo contamos todos los documentos que cumplen el filtro
+        pipeline.append({
+            "$group": {
+                "_id": None,
+                campo_calculo: {"$sum": 1}
+            }
+        })
 
     resultado = list(coll.aggregate(pipeline))
     return resultado
+
