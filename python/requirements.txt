@@ -7,3 +7,4 @@ pandas>=2.2
 matplotlib>=3.9
 networkx>=3.3
 python-dotenv>=1.0
+streamlit=>1.50.0

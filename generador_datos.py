@@ -3,14 +3,19 @@ import random
 from faker import Faker
 import os
 from collections import defaultdict
+from itertools import combinations
+
 
 # -----------------------------
-# Configuración
+# Configuración del faker
 # -----------------------------
 fake = Faker('es_ES')
 Faker.seed(42)
 random.seed(42)
 
+# -----------------------------
+# Datos de input
+# -----------------------------
 provincias_arg = provincias_arg = [
     "Buenos Aires",
     "Ciudad Autónoma de Buenos Aires",
@@ -63,13 +68,14 @@ ciudades_arg = {
     "Tierra del Fuego": ["Ushuaia"],
     "Tucumán": ["San Miguel de Tucumán"]
 }
-
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]
 tipos_actividad = ["aventura", "cultural", "gastronómica", "relax", "deportiva"]
 servicios_posibles = ["wifi", "spa", "pileta", "desayuno", "gimnasio", "restaurant"]
 estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada",""]
 
-# Cantidades
+# ----------------------------
+# Parametros del generador
+# -----------------------------
 n_usuarios = 60
 n_hoteles = 5
 n_actividades = 3
@@ -120,7 +126,7 @@ for destino in destinos:
             "nombre": f"{fake.company()} Hotel",
             "ciudad": destino["ciudad"],
             "provincia": destino["provincia"],
-            "precio": random.randint(40000, 250000),
+            "precio": random.randint(80000, 300000),
             "calificacion": random.randint(1, 5),
             "servicios": ";".join(random.sample(servicios_posibles, random.randint(2, 4)))
         })
@@ -210,30 +216,7 @@ for usuario_id, destinos_usuario in reservas_usuario.items():
 
 print(f"✅ Total de reservas generadas: {len(reservas)}")
 
-# -----------------------------
-# Guardar CSV
-# -----------------------------
-carpeta_destino = "notebooks/fuentes"
-os.makedirs(carpeta_destino, exist_ok=True)
 
-pd.DataFrame(usuarios).to_csv(f"{carpeta_destino}/usuarios.csv", index=False, encoding="utf-8")
-pd.DataFrame(destinos).to_csv(f"{carpeta_destino}/destinos.csv", index=False, encoding="utf-8")
-pd.DataFrame(hoteles).to_csv(f"{carpeta_destino}/hoteles.csv", index=False, encoding="utf-8")
-pd.DataFrame(actividades).to_csv(f"{carpeta_destino}/actividades.csv", index=False, encoding="utf-8")
-pd.DataFrame(reservas).to_csv(f"{carpeta_destino}/reservas.csv", index=False, encoding="utf-8")
-
-
-print(f"✅ Archivos generados correctamente")
-
-import pandas as pd
-import random
-from collections import defaultdict
-from itertools import combinations
-
-# -----------------------------
-# Configuración
-# -----------------------------
-random.seed(42)
 
 usuario_ids = list(range(1, n_usuarios+1))
 
@@ -285,5 +268,14 @@ for usuario1, usuario2 in pares_posibles:
 # -----------------------------
 # Guardar CSV
 # -----------------------------
+carpeta_destino = "notebooks/fuentes"
+os.makedirs(carpeta_destino, exist_ok=True)
+
+pd.DataFrame(usuarios).to_csv(f"{carpeta_destino}/usuarios.csv", index=False, encoding="utf-8")
+pd.DataFrame(destinos).to_csv(f"{carpeta_destino}/destinos.csv", index=False, encoding="utf-8")
+pd.DataFrame(hoteles).to_csv(f"{carpeta_destino}/hoteles.csv", index=False, encoding="utf-8")
+pd.DataFrame(actividades).to_csv(f"{carpeta_destino}/actividades.csv", index=False, encoding="utf-8")
+pd.DataFrame(reservas).to_csv(f"{carpeta_destino}/reservas.csv", index=False, encoding="utf-8")
 pd.DataFrame(relaciones).to_csv(f"{carpeta_destino}/usuarios_relaciones.csv", index=False, encoding="utf-8")
 print(f"Se generaron {len(relaciones)} relaciones para {len(usuario_ids)} usuarios.")
+print(f"✅ Archivos generados correctamente")
