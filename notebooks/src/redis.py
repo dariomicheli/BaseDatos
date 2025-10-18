@@ -73,6 +73,23 @@ def guardar_en_cache(tipo, parametros, resultado, ttl=600):
     except Exception:
         return False
 
+def insertar_en_redis(nombre_coleccion, df):
+    """Guarda datos en Redis (solo usuarios y reservas temporales)."""
+    if nombre_coleccion == "usuarios":
+        try:
+            conectados = guardar_usuarios_conectados(df, 15)
+            print(f"✅ Se registran {conectados} usuarios conectados en Redis.")
+        except Exception as e:
+            print(f"⚠️ Error al guardar usuarios conectados en Redis: {e}")
+
+    elif nombre_coleccion == "reservas":
+        df_reservas_temporales = df[df["estado"].isna()]
+        try:
+            resultado = carga_masiva_reservas_temporales(df_reservas_temporales)
+            print(f"✅ Se insertaron {resultado} reservas temporales en Redis.")
+        except Exception as e:
+            print(f"⚠️ Error al cargar reservas temporales en Redis: {e}")
+
 
 
 

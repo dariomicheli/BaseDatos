@@ -4,6 +4,12 @@ from pprint import pprint
 import pandas as pd
 
 
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#                                                             ALTA Y CARGA MONGO
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def coleccion_existe(db, nombre_coleccion):
     """
     Verifica si una colección existe en la base de datos.
@@ -80,6 +86,44 @@ def insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado=Fal
         print(f"❌ Error inesperado: {type(e).__name__} - {e}")
 
 
+def insertar_en_mongo(nombre_base, nombre_coleccion, df):
+    """Crea e inserta datos en una colección de MongoDB."""
+    crear_coleccion(nombre_base, nombre_coleccion, recrear=True)
+    filas = df.to_dict(orient="records")
+
+    # Si es reservas, se filtran solo las que tienen estado
+    if nombre_coleccion == "reservas":
+        df_filtrado = df[df["estado"].notna() & (df["estado"].astype(str).str.strip() != "")]
+        insertar_muchos_coleccion(nombre_base, nombre_coleccion, df_filtrado.to_dict("records"))
+    else:
+        insertar_muchos_coleccion(nombre_base, nombre_coleccion, filas)
+
+    print(f"✅ Colección {nombre_coleccion} creada e insertada en MongoDB.")
+
+def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
+    """
+    Lee CSV usando lectura_csv y lo inserta en la colección.
+    Devuelve el InsertManyResult o None si no se insertó nada.
+
+    Parametros:
+        ruta: dirección del archivo csv.
+        nombre_coleccion: nombre de la colección a guardar
+        ordenado (opcional):
+    """ 
+    if df is None or df.empty:
+        return None
+
+    # Convertir a diccionario
+    datos = df.to_dict(orient="records")
+
+    return insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado)
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#                                                             CONSULTAS
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 def obtener_cursor(nombre_base, nombre_coleccion, limite=None, filtro=None, proyeccion=None):
     """
     Retorna un cursor para la consulta.
@@ -139,24 +183,6 @@ def contar_documentos(nombre_base, nombre_coleccion):
             f"La colección '{nombre_coleccion}' no existe en la base '{nombre_base}'.")
     
     return coleccion.count_documents({})
-
-def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
-    """
-    Lee CSV usando lectura_csv y lo inserta en la colección.
-    Devuelve el InsertManyResult o None si no se insertó nada.
-
-    Parametros:
-        ruta: dirección del archivo csv.
-        nombre_coleccion: nombre de la colección a guardar
-        ordenado (opcional):
-    """ 
-    if df is None or df.empty:
-        return None
-
-    # Convertir a diccionario
-    datos = df.to_dict(orient="records")
-
-    return insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado)
 
 def contador(nombre_base, coleccion, agrupacion=None, campo_calculo="cantidad", filtrar=None):
     """

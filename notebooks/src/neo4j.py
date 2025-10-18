@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 
 def nodo_existe(label, driver):
     """
@@ -87,3 +88,85 @@ def consulta(db, query, parametros=None):
     return pd.DataFrame(data)
 
 
+# -------------------------------------------------------------
+# FUNCIONES AUXILIARES
+# -------------------------------------------------------------
+
+def crear_nodos_neo4j(nombre_coleccion, df):
+    """
+    Crea nodos en Neo4j según la colección (usuarios o destinos).
+    """
+    if nombre_coleccion not in ["usuarios", "destinos"]:
+        return
+
+    nombre_nodo = "Usuario" if nombre_coleccion == "usuarios" else "Destino"
+    campo_clave = "usuario_id" if nombre_nodo == "Usuario" else "destino_id"
+
+    filas = df.to_dict("records")
+
+    from db_connections import db_neo4j
+    import src.neo4j as neo4j
+
+    with db_neo4j.session() as session:
+        for fila in filas:
+            session.execute_write(neo4j.crear_nodo, nombre_nodo, campo_clave, fila)
+
+    print(f"✅ Nodos de {nombre_nodo} creados exitosamente en Neo4j.")
+
+
+def crear_relaciones_visito(df):
+    """
+    Crea relaciones VISITO entre Usuario y Destino en Neo4j 
+    para reservas Confirmadas o Pagadas hasta la fecha actual.
+    """
+    if df.empty:
+        return
+
+    df["fecha_reserva"] = pd.to_datetime(df["fecha_reserva"], errors="coerce")
+    hoy = pd.Timestamp.today().normalize()
+
+    df_validas = df[df["estado"].isin(["Confirmada", "Pagada"]) & (df["fecha_reserva"] <= hoy)]
+
+    if df_validas.empty:
+        print("⚠️ No hay reservas confirmadas/pagadas para crear relaciones VISITO.")
+        return
+
+    from db_connections import db_neo4j
+    import src.neo4j as neo4j
+
+    with db_neo4j.session() as session:
+        for _, fila in df_validas.iterrows():
+            session.execute_write(
+                neo4j.crear_relacion_unidireccional,
+                "Usuario", "usuario_id", fila["usuario_id"],
+                "Destino", "destino_id", fila["destino_id"],
+                "VISITO"
+            )
+
+    print("✅ Relaciones VISITO creadas exitosamente en Neo4j.")
+
+
+def crear_relaciones_usuarios():
+    """
+    Crea relaciones bidireccionales entre usuarios (usuarios_relaciones.csv).
+    """
+    from db_connections import db_neo4j
+    from src import utils, neo4j
+
+    ruta_relaciones = Path("fuentes") / "usuarios_relaciones.csv"
+    df_rel = utils.lectura_csv(ruta_relaciones)
+
+    if df_rel is None or df_rel.empty:
+        print("⚠️ No se encontraron relaciones entre usuarios.")
+        return
+
+    with db_neo4j.session() as session:
+        for _, fila in df_rel.iterrows():
+            session.execute_write(
+                neo4j.crear_relacion_bidireccional,
+                "Usuario", "usuario_id", fila["usuario1"],
+                "Usuario", "usuario_id", fila["usuario2"],
+                fila["tipo"]
+            )
+
+    print("✅ Relaciones entre usuarios creadas exitosamente en Neo4j.")
