@@ -1,5 +1,5 @@
 from db_connections import db_redis as r
-import random
+import random, json
 
 def borrar_reservas_temporales():
     claves = list(r.scan_iter("reserva_temp:*"))
@@ -49,3 +49,31 @@ def guardar_usuarios_conectados(df, cantidad=10):
         r.set(f"usuario:{fila['usuario_id']}:sesion", "activa", ex=3600) #Expira en 1hs
 
     return len(filas)
+
+def generar_clave_cache(tipo, parametros):
+    """
+    Genera una clave única para búsquedas cacheadas.
+    tipo: 'destinos', 'hoteles', 'actividades'
+    parametros: diccionario con filtros
+    """
+    partes = [f"{k}:{v}" for k, v in sorted(parametros.items())]
+    return f"busqueda:{tipo}:" + "|".join(partes)
+
+def obtener_cache(tipo, parametros):
+    clave = generar_clave_cache(tipo, parametros)
+    resultado = r.get(clave)
+    if resultado:
+        return json.loads(resultado)
+    return None
+
+def guardar_en_cache(tipo, parametros, resultado, ttl=600):
+    clave = generar_clave_cache(tipo, parametros)
+    try:
+        return r.set(clave, json.dumps(resultado), ex=ttl)
+    except Exception:
+        return False
+
+
+
+
+
