@@ -1,5 +1,7 @@
 import pandas as pd
 from pathlib import Path
+from db_connections import db_neo4j
+from src import utils,neo4j
 
 def nodo_existe(label, driver):
     """
@@ -104,9 +106,6 @@ def crear_nodos_neo4j(nombre_coleccion, df):
 
     filas = df.to_dict("records")
 
-    from db_connections import db_neo4j
-    import src.neo4j as neo4j
-
     with db_neo4j.session() as session:
         for fila in filas:
             session.execute_write(neo4j.crear_nodo, nombre_nodo, campo_clave, fila)
@@ -131,9 +130,6 @@ def crear_relaciones_visito(df):
         print("⚠️ No hay reservas confirmadas/pagadas para crear relaciones VISITO.")
         return
 
-    from db_connections import db_neo4j
-    import src.neo4j as neo4j
-
     with db_neo4j.session() as session:
         for _, fila in df_validas.iterrows():
             session.execute_write(
@@ -150,9 +146,6 @@ def crear_relaciones_usuarios():
     """
     Crea relaciones bidireccionales entre usuarios (usuarios_relaciones.csv).
     """
-    from db_connections import db_neo4j
-    from src import utils, neo4j
-
     ruta_relaciones = Path("fuentes") / "usuarios_relaciones.csv"
     df_rel = utils.lectura_csv(ruta_relaciones)
 
@@ -170,3 +163,22 @@ def crear_relaciones_usuarios():
             )
 
     print("✅ Relaciones entre usuarios creadas exitosamente en Neo4j.")
+
+
+def eliminar_amigos(usuario_id):
+    """
+    Elimina las relaciones AMIGO_DE de un usuario id que se pasa como parametro
+    """
+    
+    query = """
+    MATCH (u:Usuario {usuario_id: $id})-[r:AMIGO_DE]-()
+    WITH count(r) as cantidad, collect(r) as relaciones
+    FOREACH (rel IN relaciones | DELETE rel)
+    RETURN cantidad
+    """
+    
+    with db_neo4j.session() as session:
+        resultado = session.run(query,id=usuario_id)
+        cantidad = resultado.single()["cantidad"]
+        return cantidad
+        

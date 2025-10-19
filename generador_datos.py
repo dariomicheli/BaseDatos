@@ -44,7 +44,7 @@ provincias_arg = provincias_arg = [
 ]
 ciudades_arg = {
     "Buenos Aires": ["La Plata", "Mar del Plata"],
-    "Ciudad Autónoma de Buenos Aires": ["CABA"], 
+    "Ciudad Autónoma de Buenos Aires": ["CABA"],
     "Catamarca": ["San Fernando"],
     "Chaco": ["Resistencia"],
     "Chubut": ["Puerto Madryn"],
@@ -58,20 +58,22 @@ ciudades_arg = {
     "Mendoza": ["Mendoza", "San Rafael"],
     "Misiones": ["Posadas", "Iguazú"],
     "Neuquén": ["Neuquén", "San Martín de los Andes"],
-    "Río Negro": ["Bariloche","Viedma"],
+    "Río Negro": ["Bariloche", "Viedma"],
     "Salta": ["Salta"],
     "San Juan": ["San Juan"],
     "San Luis": ["San Luis", "Merlo"],
-    "Santa Cruz": ["Río Gallegos","El Calafate"],
+    "Santa Cruz": ["Río Gallegos", "El Calafate"],
     "Santa Fe": ["Rosario", "Santa Fe"],
     "Santiago del Estero": ["Santiago del Estero"],
     "Tierra del Fuego": ["Ushuaia"],
     "Tucumán": ["San Miguel de Tucumán"]
 }
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]
-tipos_actividad = ["aventura", "cultural", "gastronómica", "relax", "deportiva"]
-servicios_posibles = ["wifi", "spa", "pileta", "desayuno", "gimnasio", "restaurant"]
-estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada",""]
+tipos_actividad = ["aventura", "cultural",
+                   "gastronómica", "relax", "deportiva"]
+servicios_posibles = ["wifi", "spa", "pileta",
+                      "desayuno", "gimnasio", "restaurant"]
+estados_reserva = ["Confirmada", "Pagada", "Pendiente", "Cancelada", ""]
 
 # ----------------------------
 # Parametros del generador
@@ -128,7 +130,7 @@ for destino in destinos:
             "provincia": destino["provincia"],
             "precio": random.randint(80000, 300000),
             "calificacion": random.randint(1, 5),
-            "servicios": ";".join(random.sample(servicios_posibles, random.randint(2, 4)))
+            "servicios": random.sample(servicios_posibles, random.randint(2, 4))
         })
         hotel_id += 1
 
@@ -174,7 +176,7 @@ for hotel in hoteles:
     destino_precio = destino_info["precio"]
 
     # Número aleatorio de reservas por hotel
-    n_reservas_hotel = random.randint(5,30)
+    n_reservas_hotel = random.randint(5, 30)
 
     for _ in range(n_reservas_hotel):
         usuario_id = random.choice(usuario_ids)
@@ -185,7 +187,8 @@ for hotel in hoteles:
             "hotel_id": hotel["hotel_id"],
             "fecha_reserva": fake.date_between(start_date="-1y", end_date="+6m").isoformat(),
             "estado": random.choice(estados_reserva),
-            "precio_total": destino_precio + random.randint(-10000, 10000)  # pequeña variación
+            # pequeña variación
+            "precio_total": destino_precio + random.randint(-10000, 10000)
         })
         reservas_usuario[usuario_id].append(destino_id)
         reserva_id += 1
@@ -198,7 +201,8 @@ for usuario_id, destinos_usuario in reservas_usuario.items():
     faltan = 5 - len(ciudades_reservadas)
     if faltan > 0:
         nuevas_ciudades = random.sample(
-            [c for c in ciudades_disponibles if destino_por_ciudad[c]["id"] not in ciudades_reservadas],
+            [c for c in ciudades_disponibles if destino_por_ciudad[c]
+                ["id"] not in ciudades_reservadas],
             faltan
         )
         for ciudad in nuevas_ciudades:
@@ -215,7 +219,6 @@ for usuario_id, destinos_usuario in reservas_usuario.items():
             reserva_id += 1
 
 print(f"✅ Total de reservas generadas: {len(reservas)}")
-
 
 
 usuario_ids = list(range(1, n_usuarios+1))
@@ -271,11 +274,18 @@ for usuario1, usuario2 in pares_posibles:
 carpeta_destino = "notebooks/fuentes"
 os.makedirs(carpeta_destino, exist_ok=True)
 
-pd.DataFrame(usuarios).to_csv(f"{carpeta_destino}/usuarios.csv", index=False, encoding="utf-8")
-pd.DataFrame(destinos).to_csv(f"{carpeta_destino}/destinos.csv", index=False, encoding="utf-8")
-pd.DataFrame(hoteles).to_csv(f"{carpeta_destino}/hoteles.csv", index=False, encoding="utf-8")
-pd.DataFrame(actividades).to_csv(f"{carpeta_destino}/actividades.csv", index=False, encoding="utf-8")
-pd.DataFrame(reservas).to_csv(f"{carpeta_destino}/reservas.csv", index=False, encoding="utf-8")
-pd.DataFrame(relaciones).to_csv(f"{carpeta_destino}/usuarios_relaciones.csv", index=False, encoding="utf-8")
-print(f"Se generaron {len(relaciones)} relaciones para {len(usuario_ids)} usuarios.")
+pd.DataFrame(usuarios).to_csv(
+    f"{carpeta_destino}/usuarios.csv", index=False, encoding="utf-8")
+pd.DataFrame(destinos).to_csv(
+    f"{carpeta_destino}/destinos.csv", index=False, encoding="utf-8")
+pd.DataFrame(hoteles).to_csv(
+    f"{carpeta_destino}/hoteles.csv", index=False, encoding="utf-8")
+pd.DataFrame(actividades).to_csv(
+    f"{carpeta_destino}/actividades.csv", index=False, encoding="utf-8")
+pd.DataFrame(reservas).to_csv(
+    f"{carpeta_destino}/reservas.csv", index=False, encoding="utf-8")
+pd.DataFrame(relaciones).to_csv(
+    f"{carpeta_destino}/usuarios_relaciones.csv", index=False, encoding="utf-8")
+print(
+    f"Se generaron {len(relaciones)} relaciones para {len(usuario_ids)} usuarios.")
 print(f"✅ Archivos generados correctamente")

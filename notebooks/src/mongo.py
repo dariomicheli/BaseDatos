@@ -2,8 +2,7 @@ from db_connections import client
 from src.utils import lectura_csv
 from pprint import pprint
 import pandas as pd
-
-
+import ast
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #                                                             ALTA Y CARGA MONGO
@@ -89,6 +88,12 @@ def insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado=Fal
 def insertar_en_mongo(nombre_base, nombre_coleccion, df):
     """Crea e inserta datos en una colección de MongoDB."""
     crear_coleccion(nombre_base, nombre_coleccion, recrear=True)
+    
+    if nombre_coleccion == "hoteles":
+        #Se convierten los servicios en una lista para que no se guarde como string
+        df["servicios"] = df["servicios"].apply(
+                lambda x: ast.literal_eval(x) if isinstance(x, str) and x.startswith("[") else x)
+
     filas = df.to_dict(orient="records")
 
     # Si es reservas, se filtran solo las que tienen estado
