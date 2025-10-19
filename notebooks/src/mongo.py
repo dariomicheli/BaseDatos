@@ -148,7 +148,6 @@ def obtener_cursor(nombre_base, nombre_coleccion, limite=None, filtro=None, proy
         cursor = cursor.limit(limite)
     return cursor
 
-
 def imprimir_cursor(cursor, campos=None, maximo=None):
     """
     Imprime documentos de un cursor MongoDB con campos opcionales.
