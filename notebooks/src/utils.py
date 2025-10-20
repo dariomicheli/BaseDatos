@@ -2,7 +2,9 @@ import pandas as pd
 from pathlib import Path
 
 def lectura_csv(ruta):
-    """Lee un CSV desde la ruta dada y devuelve un DataFrame, o None si no existe."""
+    """
+    Lee un CSV desde la ruta dada y devuelve un DataFrame, o None si no existe.
+    """
     if ruta.exists():
         df = pd.read_csv(ruta)
         return df
@@ -11,7 +13,9 @@ def lectura_csv(ruta):
         return None
 
 def procesar_csv(nombre_archivo):
-    """Lee un CSV desde la carpeta 'fuentes' y devuelve un DataFrame si tiene datos."""
+    """
+    Lee un CSV desde la carpeta 'fuentes' y devuelve un DataFrame si tiene datos.
+    """
     ruta = Path("fuentes") / nombre_archivo
     df = lectura_csv(ruta)
     if df is None or df.empty:
