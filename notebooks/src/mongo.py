@@ -4,9 +4,9 @@ from pprint import pprint
 import pandas as pd
 import ast
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #                                                             ALTA Y CARGA MONGO
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 def coleccion_existe(db, nombre_coleccion):
@@ -26,6 +26,10 @@ def coleccion_existe(db, nombre_coleccion):
 def obtener_coleccion(nombre_base, nombre_coleccion):
     """
     Devuelve el objeto Collection.
+
+    Parámetros:
+    - nombre_base: nombre de la base de datos de MongoDB
+    - nombre_coleccion: nombre de la colección 
     """
     db = client[nombre_base]
     if not coleccion_existe(db, nombre_coleccion):
@@ -36,14 +40,14 @@ def obtener_coleccion(nombre_base, nombre_coleccion):
 
 def crear_coleccion(nombre_base, nombre_coleccion, recrear=False):
     """
-    Crea una colección dentro de la base de datos especificada. Si la misma ya existe, la elimina.
+    Crea una colección dentro de la base de datos especificada.
 
     Parametros:
         nombre_base:nombre de la base de datos dentro de mongoDB
         nombre_coleccion: nombre de la colección a crear
         recrear: si es True, borra la coleccion. 
     Retorna:
-        coleccion: 
+        coleccion creada
     """
     db = client[nombre_base]
 
@@ -59,15 +63,17 @@ def crear_coleccion(nombre_base, nombre_coleccion, recrear=False):
 
 def insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado=False):
     """
-    Inserta varios datos en una colección.
+    Inserta varios documentos en una colección.
 
     Parametros:
+        nombre_base: nombre de la base de datos dentro de mongoDB
         nombre_coleccion: nombre de la colección a ingresar los datos.
         datos: diccionario con las datos que se quieren incluir.
+        ordenado: Si es True, se ingresan los datos ordenados.
     """
-
     if datos is None:
         raise ValueError("El parámetro 'datos' no puede ser None.")
+        
     lista_datos = list(datos)
     if not lista_datos:
         print("⚠️ El DataFrame está vacío, no se insertaron datos.")
@@ -78,15 +84,22 @@ def insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado=Fal
 
     try:
         resultado = coleccion.insert_many(lista_datos, ordered=ordenado)
-        print(
-            f"✅ Se insertaron {len(resultado.inserted_ids)} documentos en '{coleccion.name}'.")
+        print(f"✅ Se insertaron {len(resultado.inserted_ids)} documentos en '{coleccion.name}'.")
         return resultado
+        
     except Exception as e:
         print(f"❌ Error inesperado: {type(e).__name__} - {e}")
 
 
 def insertar_en_mongo(nombre_base, nombre_coleccion, df):
-    """Crea e inserta datos en una colección de MongoDB."""
+    """
+    Crea e inserta datos en una colección de MongoDB.
+
+    Parametros:
+        nombre_base: nombre de la base de datos dentro de mongoDB
+        nombre_coleccion: nombre de la colección a ingresar los datos.
+        df: dataFrame con los datos a insertar
+    """
     crear_coleccion(nombre_base, nombre_coleccion, recrear=True)
     
     if nombre_coleccion == "hoteles":
@@ -107,13 +120,14 @@ def insertar_en_mongo(nombre_base, nombre_coleccion, df):
 
 def cargar_df_a_coleccion(df, nombre_base, nombre_coleccion,ordenado=False):
     """
-    Lee CSV usando lectura_csv y lo inserta en la colección.
+    Carga un DataFrame en una colección de MongoDB.
     Devuelve el InsertManyResult o None si no se insertó nada.
 
     Parametros:
-        ruta: dirección del archivo csv.
+        df: DataFrame con los datos.
+        nombre_base: nombre de la base de datos dentro de mongoDB
         nombre_coleccion: nombre de la colección a guardar
-        ordenado (opcional):
+        ordenado (opcional): Si es True, lo inserta ordenado.
     """ 
     if df is None or df.empty:
         return None
@@ -134,11 +148,11 @@ def obtener_cursor(nombre_base, nombre_coleccion, limite=None, filtro=None, proy
     Retorna un cursor para la consulta.
 
     Parametros:
-        nombre_base:
+        nombre_base: nombre de la base de datos dentro de mongoDB
         nombre_colección: colección de la cual se quieren obtener datos
         limite (opcional): limite de registros que desean obtener.
-        filtro (opcional):
-        proyeccion (opcional):
+        filtro (opcional): filtro para la consulta a la base.
+        proyeccion (opcional): campos a proyectar
     Retorna
         cursor: datos de la consulta a la colección
     """
@@ -151,33 +165,15 @@ def obtener_cursor(nombre_base, nombre_coleccion, limite=None, filtro=None, proy
     cursor = coleccion.find(filter=filtro or {}, projection=proyeccion)
     if limite is not None:
         cursor = cursor.limit(limite)
-    return cursor
-
-def imprimir_cursor(cursor, campos=None, maximo=None):
-    """
-    Imprime documentos de un cursor MongoDB con campos opcionales.
-
-    Parámetros:
-    - cursor: objeto pymongo.cursor.Cursor
-    - campos (opcional): lista de campos a mostrar (opcional)
-    - maximo (opcional): 
-    """
-    contar=0
-    for doc in cursor:
-        if campos:
-            doc_filtrado= {k: doc.get(k) for k in campos}
-            pprint(doc_filtrado)
-        else:
-            pprint(doc)
-        contar+=1
-        if maximo is not None and contar>=maximo:
-            break
-    if contar==0:
-        print("⚠️ No se encontraron documentos.")       
+    return cursor   
 
 def contar_documentos(nombre_base, nombre_coleccion):
     """
     Devuelve la cantidad de documentos de una coleccion
+
+    Parametros:
+        nombre_base: nombre de la base de datos dentro de mongoDB
+        nombre_colección: colección de la cual se quieren obtener datos
     """
     db = client[nombre_base]
     coleccion = db[nombre_coleccion]
