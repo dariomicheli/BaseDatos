@@ -19,8 +19,6 @@ def nodo_existe(label, driver):
         resultado = session.run(query)
         return resultado.single()["existe"]
 
-
-
 def crear_nodo(tx, nombre_nodo, clave_id, datos):
     """
     Crea un nodo en Neo4j de forma genérica si no existe.
@@ -43,7 +41,6 @@ def crear_nodo(tx, nombre_nodo, clave_id, datos):
         propiedades=datos
     )
     return result.single()
-
 
 def crear_relacion_unidireccional(tx, nodo_origen, campo_origen, valor_origen,
                    nodo_destino, campo_destino, valor_destino,

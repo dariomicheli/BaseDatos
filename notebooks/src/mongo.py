@@ -22,7 +22,6 @@ def coleccion_existe(db, nombre_coleccion):
     """
     return nombre_coleccion in db.list_collection_names()  
 
-
 def obtener_coleccion(nombre_base, nombre_coleccion):
     """
     Devuelve el objeto Collection.
@@ -36,7 +35,6 @@ def obtener_coleccion(nombre_base, nombre_coleccion):
         raise KeyError(
             f"La colección '{nombre_coleccion}' no existe en la base '{nombre_base}'.")
     return db[nombre_coleccion]
-
 
 def crear_coleccion(nombre_base, nombre_coleccion, recrear=False):
     """
@@ -59,7 +57,6 @@ def crear_coleccion(nombre_base, nombre_coleccion, recrear=False):
 
     coleccion = db.create_collection(nombre_coleccion)
     return coleccion
-
 
 def insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado=False):
     """
@@ -89,7 +86,6 @@ def insertar_muchos_coleccion(nombre_base, nombre_coleccion, datos, ordenado=Fal
         
     except Exception as e:
         print(f"❌ Error inesperado: {type(e).__name__} - {e}")
-
 
 def insertar_en_mongo(nombre_base, nombre_coleccion, df):
     """
