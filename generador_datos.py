@@ -69,6 +69,18 @@ ciudades_arg = {
     "Tucumán": ["San Miguel de Tucumán"]
 }
 tipos_destino = ["Cultural", "Playa", "Montaña", "Aventura", "Relax"]
+nombre_actividad = [
+    "Visita guiada a ciudad",
+    "Tour gastronómico local",
+    "Caminata por parque",
+    "Paseo en bicicleta",
+    "Clase de yoga o meditación",
+    "Excursión a sitio turístico cercano",
+    "Recorrido cultural o histórico",
+    "Actividad de bienestar en spa",
+    "Clase de cocina típica",
+    "Participación en evento o festival local"
+]
 tipos_actividad = ["aventura", "cultural",
                    "gastronómica", "relax", "deportiva"]
 servicios_posibles = ["wifi", "spa", "pileta",
@@ -145,7 +157,7 @@ for destino in destinos:
     for _ in range(n_actividades_ciudad):
         actividades.append({
             "actividad_id": actividad_id,
-            "nombre": fake.catch_phrase(),
+            "nombre": random.choice(nombre_actividad),
             "tipo": random.choice(tipos_actividad),
             "ciudad": destino["ciudad"],
             "provincia": destino["provincia"],
