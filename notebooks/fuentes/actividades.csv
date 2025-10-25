@@ -1,112 +1,112 @@
 actividad_id,nombre,tipo,ciudad,provincia,precio
-1,Observación de ave,cultural,La Plata,Buenos Aires,68405
-2,Camping en área natural,gastronómica,La Plata,Buenos Aires,67486
-3,Clase de cocina típica,deportiva,La Plata,Buenos Aires,59111
-4,Recorrido en barco o catamarán,aventura,Mar del Plata,Buenos Aires,74567
-5,Observación de ave,gastronómica,Mar del Plata,Buenos Aires,34908
-6,Clase de surf o deporte acuático,cultural,Mar del Plata,Buenos Aires,39809
-7,Visita guiada a museo,deportiva,CABA,Ciudad Autónoma de Buenos Aires,28295
-8,Visita a bodega o viñedo con degustación,aventura,CABA,Ciudad Autónoma de Buenos Aires,23573
-9,Tour cultural con danza y música local,gastronómica,CABA,Ciudad Autónoma de Buenos Aires,65705
-10,Excursión de senderismo,relax,San Fernando,Catamarca,26723
-11,Participación en festival local,aventura,San Fernando,Catamarca,57621
-12,Recorrido en barco o catamarán,relax,San Fernando,Catamarca,51373
-13,Safari fotográfico o recorrido de vida silvestre,gastronómica,Resistencia,Chaco,32082
-14,Recorrido histórico por ciudad,gastronómica,Resistencia,Chaco,76473
-15,Camping en área natural,aventura,Resistencia,Chaco,73878
-16,Tour gastronómico local,relax,Puerto Madryn,Chubut,52227
-17,Tour gastronómico local,deportiva,Puerto Madryn,Chubut,61251
-18,Observación de estrella o astronomía turística,aventura,Puerto Madryn,Chubut,29943
-19,Excursión de senderismo,deportiva,Córdoba,Córdoba,39912
-20,Tour gastronómico local,cultural,Córdoba,Córdoba,27762
-21,Tour cultural con danza y música local,relax,Córdoba,Córdoba,59735
-22,Paseo a caballo,deportiva,Villa Carlos Paz,Córdoba,34790
-23,Excursión a cascada o río,deportiva,Villa Carlos Paz,Córdoba,44928
-24,Safari fotográfico o recorrido de vida silvestre,relax,Villa Carlos Paz,Córdoba,39487
-25,Participación en festival local,deportiva,Río Cuarto,Córdoba,48103
-26,Recorrido en barco o catamarán,deportiva,Río Cuarto,Córdoba,60699
-27,Recorrido histórico por ciudad,deportiva,Río Cuarto,Córdoba,68502
-28,Caminata por parque natural,cultural,Corrientes,Corrientes,60993
-29,Observación de ave,gastronómica,Corrientes,Corrientes,63281
-30,Tour gastronómico local,cultural,Corrientes,Corrientes,35719
-31,Paseo en bicicleta por ciudad o campo,deportiva,Paraná,Entre Ríos,24919
-32,Paseo en bicicleta por ciudad o campo,aventura,Paraná,Entre Ríos,46772
-33,Safari fotográfico o recorrido de vida silvestre,deportiva,Paraná,Entre Ríos,50796
-34,Recorrido en barco o catamarán,aventura,Concordia,Entre Ríos,35170
-35,Recorrido en barco o catamarán,gastronómica,Concordia,Entre Ríos,66070
-36,Participación en festival local,relax,Concordia,Entre Ríos,24664
-37,Observación de estrella o astronomía turística,cultural,Gualeguaychú,Entre Ríos,37337
-38,Tour de café o té con cata,deportiva,Gualeguaychú,Entre Ríos,63331
-39,Tour de café o té con cata,cultural,Gualeguaychú,Entre Ríos,47861
-40,Caminata por parque natural,deportiva,Formosa,Formosa,34733
-41,Tour en vehículo 4x4 por zona rural,cultural,Formosa,Formosa,79533
-42,Visita a bodega o viñedo con degustación,cultural,Formosa,Formosa,24679
-43,Recorrido histórico por ciudad,cultural,San Salvador de Jujuy,Jujuy,71945
-44,Recorrido en barco o catamarán,deportiva,San Salvador de Jujuy,Jujuy,69083
-45,Recorrido histórico por castillo o fortaleza,deportiva,San Salvador de Jujuy,Jujuy,38914
-46,Safari fotográfico o recorrido de vida silvestre,aventura,Santa Rosa,La Pampa,50716
-47,"Actividad de bienestar: yoga, spa, meditación",gastronómica,Santa Rosa,La Pampa,65857
-48,Visita a mercado local o feria artesanal,gastronómica,Santa Rosa,La Pampa,52798
-49,Tour cultural con danza y música local,relax,La Rioja,La Rioja,48688
-50,Tour gastronómico local,deportiva,La Rioja,La Rioja,22612
-51,Tour de arte urbano y grafiti,relax,La Rioja,La Rioja,68138
-52,Tour fotográfico,deportiva,Chilecito,La Rioja,36408
-53,Visita guiada a museo,aventura,Chilecito,La Rioja,35002
-54,Observación de estrella o astronomía turística,deportiva,Chilecito,La Rioja,58477
-55,Visita guiada a museo,gastronómica,Mendoza,Mendoza,57764
-56,Recorrido histórico por ciudad,cultural,Mendoza,Mendoza,50834
-57,Escalada en roca o montañismo,relax,Mendoza,Mendoza,38229
-58,Paseo en bicicleta por ciudad o campo,deportiva,San Rafael,Mendoza,48566
-59,Tour en vehículo 4x4 por zona rural,relax,San Rafael,Mendoza,25979
-60,Camping en área natural,gastronómica,San Rafael,Mendoza,46761
-61,Tour fotográfico,gastronómica,Posadas,Misiones,63917
-62,Caminata por parque natural,cultural,Posadas,Misiones,41614
-63,Tour de arquitectura y diseño urbano,relax,Posadas,Misiones,38888
-64,Observación de estrella o astronomía turística,relax,Iguazú,Misiones,73317
-65,Excursión a cascada o río,deportiva,Iguazú,Misiones,22404
-66,Safari fotográfico o recorrido de vida silvestre,aventura,Iguazú,Misiones,40612
-67,Visita a bodega o viñedo con degustación,gastronómica,Neuquén,Neuquén,27597
-68,Excursión a cascada o río,relax,Neuquén,Neuquén,76682
-69,Escalada en roca o montañismo,aventura,Neuquén,Neuquén,63100
-70,Participación en festival local,deportiva,San Martín de los Andes,Neuquén,50276
-71,Tour de arquitectura y diseño urbano,aventura,San Martín de los Andes,Neuquén,32293
-72,Escalada en roca o montañismo,gastronómica,San Martín de los Andes,Neuquén,60804
-73,Excursión a cascada o río,relax,Bariloche,Río Negro,60986
-74,Safari fotográfico o recorrido de vida silvestre,aventura,Bariloche,Río Negro,33340
-75,Visita a bodega o viñedo con degustación,deportiva,Bariloche,Río Negro,28586
-76,Experiencia de pesca deportiva o acuática,gastronómica,Viedma,Río Negro,48712
-77,Tour de arte urbano y grafiti,relax,Viedma,Río Negro,27957
-78,Visita guiada a museo,deportiva,Viedma,Río Negro,72383
-79,"Turismo de aventura (rafting, canopy, tirolesa)",cultural,Salta,Salta,40365
-80,Tour cultural con danza y música local,aventura,Salta,Salta,56192
-81,Tour de arquitectura y diseño urbano,aventura,Salta,Salta,34725
-82,Recorrido histórico por castillo o fortaleza,aventura,San Juan,San Juan,50241
-83,Caminata por parque natural,cultural,San Juan,San Juan,52661
-84,Experiencia de pesca deportiva o acuática,gastronómica,San Juan,San Juan,53349
-85,"Actividad de bienestar: yoga, spa, meditación",gastronómica,San Luis,San Luis,47229
-86,Recorrido histórico por castillo o fortaleza,relax,San Luis,San Luis,50947
-87,"Turismo de aventura (rafting, canopy, tirolesa)",relax,San Luis,San Luis,56127
-88,Excursión de senderismo,relax,Merlo,San Luis,32491
-89,Experiencia de pesca deportiva o acuática,deportiva,Merlo,San Luis,53308
-90,Tour de compras en zona comercial o outlet,cultural,Merlo,San Luis,76624
-91,Tour gastronómico local,gastronómica,Río Gallegos,Santa Cruz,70638
-92,Tour de café o té con cata,relax,Río Gallegos,Santa Cruz,42274
-93,Experiencia de pesca deportiva o acuática,deportiva,Río Gallegos,Santa Cruz,37509
-94,Recorrido histórico por castillo o fortaleza,aventura,El Calafate,Santa Cruz,38536
-95,Tour de compras en zona comercial o outlet,gastronómica,El Calafate,Santa Cruz,74884
-96,Clase de cocina típica,deportiva,El Calafate,Santa Cruz,63249
-97,Camping en área natural,cultural,Rosario,Santa Fe,49264
-98,Tour cultural con danza y música local,relax,Rosario,Santa Fe,42618
-99,Tour fotográfico,deportiva,Rosario,Santa Fe,69995
-100,Tour cultural con danza y música local,relax,Santa Fe,Santa Fe,49841
-101,Experiencia de pesca deportiva o acuática,gastronómica,Santa Fe,Santa Fe,76990
-102,Observación de ave,cultural,Santa Fe,Santa Fe,57473
-103,Visita a mercado local o feria artesanal,cultural,Santiago del Estero,Santiago del Estero,76099
-104,Excursión a cascada o río,relax,Santiago del Estero,Santiago del Estero,22860
-105,Tour fotográfico,relax,Santiago del Estero,Santiago del Estero,66217
-106,Experiencia de pesca deportiva o acuática,relax,Ushuaia,Tierra del Fuego,45302
-107,Observación de estrella o astronomía turística,cultural,Ushuaia,Tierra del Fuego,52461
-108,Recorrido histórico por ciudad,cultural,Ushuaia,Tierra del Fuego,52918
-109,Clase de cocina típica,gastronómica,San Miguel de Tucumán,Tucumán,76996
-110,Caminata por parque natural,relax,San Miguel de Tucumán,Tucumán,26534
-111,Escalada en roca o montañismo,relax,San Miguel de Tucumán,Tucumán,21005
+1,Paseo en bicicleta,cultural,La Plata,Buenos Aires,68405
+2,Actividad de bienestar en spa,gastronómica,La Plata,Buenos Aires,67486
+3,Participación en evento o festival local,deportiva,La Plata,Buenos Aires,59111
+4,Clase de yoga o meditación,aventura,Mar del Plata,Buenos Aires,74567
+5,Paseo en bicicleta,gastronómica,Mar del Plata,Buenos Aires,34908
+6,Excursión a sitio turístico cercano,cultural,Mar del Plata,Buenos Aires,39809
+7,Visita guiada a ciudad,deportiva,CABA,Ciudad Autónoma de Buenos Aires,28295
+8,Clase de yoga o meditación,aventura,CABA,Ciudad Autónoma de Buenos Aires,23573
+9,Clase de cocina típica,gastronómica,CABA,Ciudad Autónoma de Buenos Aires,65705
+10,Caminata por parque,relax,San Fernando,Catamarca,26723
+11,Visita guiada a ciudad,deportiva,San Fernando,Catamarca,38634
+12,Actividad de bienestar en spa,relax,San Fernando,Catamarca,48866
+13,Excursión a sitio turístico cercano,cultural,Resistencia,Chaco,23367
+14,Clase de yoga o meditación,relax,Resistencia,Chaco,27476
+15,Tour gastronómico local,relax,Resistencia,Chaco,52227
+16,Tour gastronómico local,deportiva,Puerto Madryn,Chubut,61251
+17,Visita guiada a ciudad,cultural,Puerto Madryn,Chubut,29777
+18,Participación en evento o festival local,gastronómica,Puerto Madryn,Chubut,25582
+19,Paseo en bicicleta,aventura,Córdoba,Córdoba,56573
+20,Recorrido cultural o histórico,deportiva,Córdoba,Córdoba,59067
+21,Participación en evento o festival local,cultural,Córdoba,Córdoba,70835
+22,Clase de cocina típica,relax,Villa Carlos Paz,Córdoba,49524
+23,Actividad de bienestar en spa,gastronómica,Villa Carlos Paz,Córdoba,76371
+24,Participación en evento o festival local,relax,Villa Carlos Paz,Córdoba,40013
+25,Participación en evento o festival local,deportiva,Río Cuarto,Córdoba,23947
+26,Participación en evento o festival local,aventura,Río Cuarto,Córdoba,69986
+27,Paseo en bicicleta,cultural,Río Cuarto,Córdoba,37343
+28,Tour gastronómico local,cultural,Corrientes,Corrientes,35719
+29,Caminata por parque,deportiva,Corrientes,Corrientes,24919
+30,Caminata por parque,aventura,Corrientes,Corrientes,46772
+31,Actividad de bienestar en spa,deportiva,Paraná,Entre Ríos,50796
+32,Clase de yoga o meditación,aventura,Paraná,Entre Ríos,35170
+33,Clase de yoga o meditación,gastronómica,Paraná,Entre Ríos,66070
+34,Actividad de bienestar en spa,aventura,Concordia,Entre Ríos,65048
+35,Paseo en bicicleta,gastronómica,Concordia,Entre Ríos,71631
+36,Participación en evento o festival local,cultural,Concordia,Entre Ríos,47861
+37,Tour gastronómico local,deportiva,Gualeguaychú,Entre Ríos,34733
+38,Caminata por parque,gastronómica,Gualeguaychú,Entre Ríos,74174
+39,Caminata por parque,aventura,Gualeguaychú,Entre Ríos,23908
+40,Caminata por parque,gastronómica,Formosa,Formosa,58996
+41,Participación en evento o festival local,gastronómica,Formosa,Formosa,48780
+42,Tour gastronómico local,relax,Formosa,Formosa,65133
+43,Clase de yoga o meditación,relax,San Salvador de Jujuy,Jujuy,37841
+44,Clase de cocina típica,deportiva,San Salvador de Jujuy,Jujuy,52361
+45,Actividad de bienestar en spa,aventura,San Salvador de Jujuy,Jujuy,59192
+46,Visita guiada a ciudad,relax,Santa Rosa,La Pampa,68138
+47,Excursión a sitio turístico cercano,deportiva,Santa Rosa,La Pampa,36408
+48,Visita guiada a ciudad,aventura,Santa Rosa,La Pampa,35002
+49,Participación en evento o festival local,deportiva,La Rioja,La Rioja,21359
+50,Clase de yoga o meditación,deportiva,La Rioja,La Rioja,22636
+51,Caminata por parque,relax,La Rioja,La Rioja,54010
+52,Actividad de bienestar en spa,gastronómica,Chilecito,La Rioja,31894
+53,Participación en evento o festival local,relax,Chilecito,La Rioja,61601
+54,Actividad de bienestar en spa,aventura,Chilecito,La Rioja,50802
+55,Excursión a sitio turístico cercano,relax,Mendoza,Mendoza,41843
+56,Excursión a sitio turístico cercano,aventura,Mendoza,Mendoza,76212
+57,Caminata por parque,gastronómica,Mendoza,Mendoza,46977
+58,Actividad de bienestar en spa,gastronómica,San Rafael,Mendoza,63423
+59,Recorrido cultural o histórico,deportiva,San Rafael,Mendoza,22404
+60,Actividad de bienestar en spa,aventura,San Rafael,Mendoza,40612
+61,Clase de yoga o meditación,gastronómica,Posadas,Misiones,27597
+62,Recorrido cultural o histórico,deportiva,Posadas,Misiones,74062
+63,Visita guiada a ciudad,deportiva,Posadas,Misiones,50276
+64,Recorrido cultural o histórico,aventura,Iguazú,Misiones,32293
+65,Clase de cocina típica,gastronómica,Iguazú,Misiones,60804
+66,Actividad de bienestar en spa,relax,Iguazú,Misiones,69806
+67,Visita guiada a ciudad,cultural,Neuquén,Neuquén,37501
+68,Clase de cocina típica,cultural,Neuquén,Neuquén,38876
+69,Actividad de bienestar en spa,relax,Neuquén,Neuquén,27957
+70,Visita guiada a ciudad,deportiva,San Martín de los Andes,Neuquén,72383
+71,Paseo en bicicleta,cultural,San Martín de los Andes,Neuquén,40365
+72,Clase de cocina típica,aventura,San Martín de los Andes,Neuquén,56192
+73,Recorrido cultural o histórico,aventura,Bariloche,Río Negro,34725
+74,Tour gastronómico local,relax,Bariloche,Río Negro,27698
+75,Caminata por parque,relax,Bariloche,Río Negro,66963
+76,Clase de yoga o meditación,deportiva,Viedma,Río Negro,66229
+77,Clase de yoga o meditación,relax,Viedma,Río Negro,74704
+78,Actividad de bienestar en spa,relax,Viedma,Río Negro,35973
+79,Actividad de bienestar en spa,deportiva,Salta,Salta,29479
+80,Recorrido cultural o histórico,cultural,Salta,Salta,59280
+81,Clase de cocina típica,cultural,Salta,Salta,76624
+82,Tour gastronómico local,gastronómica,San Juan,San Juan,70638
+83,Recorrido cultural o histórico,gastronómica,San Juan,San Juan,71623
+84,Clase de cocina típica,gastronómica,San Juan,San Juan,73775
+85,Visita guiada a ciudad,gastronómica,San Luis,San Luis,67582
+86,Clase de yoga o meditación,deportiva,San Luis,San Luis,58005
+87,Actividad de bienestar en spa,cultural,San Luis,San Luis,49264
+88,Clase de cocina típica,relax,Merlo,San Luis,42618
+89,Excursión a sitio turístico cercano,deportiva,Merlo,San Luis,69995
+90,Clase de cocina típica,relax,Merlo,San Luis,49841
+91,Excursión a sitio turístico cercano,cultural,Río Gallegos,Santa Cruz,65711
+92,Paseo en bicicleta,deportiva,Río Gallegos,Santa Cruz,45098
+93,Paseo en bicicleta,relax,Río Gallegos,Santa Cruz,22860
+94,Excursión a sitio turístico cercano,relax,El Calafate,Santa Cruz,66217
+95,Recorrido cultural o histórico,relax,El Calafate,Santa Cruz,63495
+96,Caminata por parque,relax,El Calafate,Santa Cruz,22426
+97,Caminata por parque,deportiva,Rosario,Santa Fe,58678
+98,Excursión a sitio turístico cercano,aventura,Rosario,Santa Fe,77290
+99,Actividad de bienestar en spa,aventura,Rosario,Santa Fe,54468
+100,Actividad de bienestar en spa,aventura,Santa Fe,Santa Fe,67346
+101,Caminata por parque,relax,Santa Fe,Santa Fe,77077
+102,Caminata por parque,aventura,Santa Fe,Santa Fe,50768
+103,Clase de yoga o meditación,gastronómica,Santiago del Estero,Santiago del Estero,60845
+104,Recorrido cultural o histórico,aventura,Santiago del Estero,Santiago del Estero,75821
+105,Excursión a sitio turístico cercano,deportiva,Santiago del Estero,Santiago del Estero,44904
+106,Excursión a sitio turístico cercano,relax,Ushuaia,Tierra del Fuego,77172
+107,Clase de cocina típica,aventura,Ushuaia,Tierra del Fuego,60465
+108,Tour gastronómico local,cultural,Ushuaia,Tierra del Fuego,61363
+109,Clase de yoga o meditación,cultural,San Miguel de Tucumán,Tucumán,68940
+110,Tour gastronómico local,relax,San Miguel de Tucumán,Tucumán,26451
+111,Tour gastronómico local,relax,San Miguel de Tucumán,Tucumán,30902
